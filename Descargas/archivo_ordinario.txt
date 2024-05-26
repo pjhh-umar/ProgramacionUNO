@@ -1,0 +1,14 @@
+La carrera de Actuaría tiene sus orígenes en el siglo XVII en Inglaterra. En 1662, la primera compañía de seguros marítimos, conocida como Lloyd's of London, comenzó a operar y rápidamente se hizo evidente la necesidad de evaluar y cuantificar los riesgos asociados con las pólizas de seguros. Para abordar esta necesidad, la compañía comenzó a contratar a empleados con habilidades matemáticas y estadísticas para calcular las tarifas de las pólizas de seguros marítimos.
+
+El término "actuario" proviene del latín "actuarius", que significa registrador o contador. La primera mención documentada del término "actuario" se remonta a 1775 en la Ley de Sociedades de Seguros de Vida de Londres.
+
+En 1848, se fundó la Institute of Actuaries en Londres, siendo la primera organización profesional dedicada específicamente a la práctica de la actuaría. Esta institución estableció un currículo formal para la formación de actuarios y comenzó a otorgar certificaciones profesionales.
+
+En 1851, se fundó la Actuarial Society of America en Estados Unidos, que más tarde se convirtió en la Society of Actuaries (SOA). La SOA se centró en los aspectos técnicos de la actuación en seguros de vida, mientras que el Instituto de Actuarios en Londres se enfocó en los seguros generales y otros aspectos de la actuación.
+
+A lo largo del siglo XX, la profesión de actuario continuó evolucionando y expandiéndose a medida que se desarrollaban nuevas áreas de práctica, como los seguros de salud, pensiones y finanzas. En la actualidad, los actuarios trabajan en una variedad de industrias y desempeñan un papel fundamental en la gestión de riesgos y la toma de decisiones financieras informadas.
+
+Referencias.
+
+Bowers, N. L., Gerber, H. U., Hickman, J. C., Jones, D. A., & Nesbitt, C. J. 1997. Actuarial Mathematics. Society of Actuaries.
+Mills, A. F., & Chase, S. B. 2001. A Brief History of Actuarial Science. University of Nebraska-Lincoln.

@@ -1,0 +1,5 @@
+Tomas,19,80
+Juan, 20,90
+Jonathan,17,91
+Jonathan,17,93
+Joaquin,21,85
