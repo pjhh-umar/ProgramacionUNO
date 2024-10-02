@@ -50,10 +50,10 @@ html, body{
   margin-top: 0.25%;
   font-family: "Bitter", serif;
   font-optical-sizing: auto;
-  line-height: 1.4em;
+  line-height: 1.5em;
   font-weight: 400;
   font-size: 115%;
-  font-style: normal;
+  /* font-style: normal; */
   /*"Quicksand";    */
   /* font-family: 'Noto Serif Tangut', serif; */
   /* font-family: 'GFS Neohellenic', sans-serif; */
@@ -169,14 +169,10 @@ width: auto;
 
 .top-nav a{
   padding: .5%; 
-  font-size: 115%;
-  font-weight: 800;
+  font-size: 130%;
+  font-weight: 600;
   text-decoration: none;
-  /* color: rgb(25,25,112); */
-  /* color: rgb(0,124,191);  */
-  
-  /* color: rgb(219,75,67); */
-  color: rgb(3,66,139); 
+  color: rgb(25,25,112);
   /* font-family: system-ui; */
   font-family: 'IM Fell English';
   /* color:  rgb(0, 0, 0); */
@@ -189,8 +185,7 @@ width: auto;
   background-color: rgb(211, 211, 211);
   font-size: 130%;
   font-weight: 400;
-  /* color: rgb(25,25,112); */
-  color: rgb(0,78,148);
+  color: rgb(25,25,112);
   border-radius: 10px;
   width: 100%;
   -webkit-border-radius: 10px;
@@ -219,12 +214,11 @@ width: auto;
 
 
 .title{
-  font-size: 180%;
-  font-weight: 800; 
+  font-size: 200%;
+  font-weight: 600; 
   text-align: center;
-  font-family:'Fredericka the Great', cursive;
   /* font-family: "Cinzel"; */
-  
+  font-family:'Fredericka the Great', cursive;
   /* "Graduate", serif; */
   /* 'Pangolin', cursive;*/
   /*"VT323", monospace;/*'Fredericka the Great', cursive;*/
@@ -235,34 +229,23 @@ width: auto;
   margin-bottom: 0.25%;
   padding: 0%;
   /* color:  rgb(0, 46, 145); */
-  /* color: rgb(184,134,11);  */
-  /* color: rgb(3,66,139);  */
-
-  color: rgb(173, 113, 43);
-  /* color: rgb(25,25,112); */
-
+  color: rgb(184,134,11); 
   width: 100%;
   line-height: 1.5em;
 }
 
 .subtitle{
-  font-size: 130%;
-  font-weight: 600; 
-  text-align: center;
-  font-family:'Fredericka the Great', cursive;
-  /* font-family: 'Mate SC', serif;  */
+  font-size: 150%;
+  font-family: 'Mate SC', serif; 
   /* font: italic monospace; */
   /* font-family: 'Bacasime Antique', serif; */
   /* font-family: 'Bacasime Antique', serif; */
   /* font-family: 'Jacques Francois Shadow', cursive; */
   padding: 0%;
-  
+  font-weight: 600;
   margin-bottom: 0.25%;
   margin-top: 0%;
-  /* color:  rgb(0,0,128);  */
-  /* color: rgb(15, 108, 185); */
-  color: rgb(173, 113, 43);
-  
+  color:  rgb(0,0,128); 
   width: 100%;
   
 }
@@ -276,22 +259,16 @@ width: auto;
 } */
 
 .subsubtitle{
-  font-size: 120%;
-  font-weight: 600; 
-  text-align: center;
-  font-family:'Fredericka the Great', cursive;
-  /* font-family: 'Mate SC', serif; */
+  font-size: 140%;
   /* font-family: "Muli"; */
   /* font-family: 'Bacasime Antique', serif; */
   /* font-family: 'Bacasime Antique', serif; */
-  
+  font-family: 'Mate SC', serif;
   padding: .25%;
+  font-weight: 600; 
   margin-top: 0.25%;
   margin-bottom: 0%;
-  /* color: rgb(0,124,191);  */
-  color: rgb(178, 113, 43);
-  
-  
+  color: rgb(15, 108, 185);
   width: 100%;
 }
 
@@ -351,7 +328,6 @@ width: auto;
   align-items: center;
   align-content: space-between;
 }
-
 
 h1.title{
   font-size: 190%;
@@ -502,10 +478,10 @@ img.wmargen {
 body.card{
     /* counter-reset: temaCounter 1 sectionCounter  subsectionCounter; */
     counter-reset: listaCounter 1 sublistaCounter  subsublistaCounter;
-          }
+         }
 
 h1.page-title{
-  font-size: 160%;
+  font-size: 205%;
   text-align: center;
   /* font-family: "Muli"; */
   font-family: 'Gelasio', serif;
@@ -517,7 +493,7 @@ h1.page-title{
   width: 100%;
   /* color: rgba(255, 0, 0, 0.789); */
   /* color:  rgb(0,0,128);  */
-  color: rgb(3,66,139); 
+  color: rgb(184,134,11); 
   /* font-weight: 500; */
 }
 
@@ -534,9 +510,10 @@ h1.page-number-title{
   width: 100%;
   /* color: rgba(255, 0, 0, 0.789); */
   /* color:  rgb(0,0,128);  */
-  color: rgb(3,66,139); 
+  color: rgb(184,134,11); 
   /* font-weight: 500; */
 }
+
 h1.page-number-title::before{
   font-size: normal;
   counter-increment: temaCounter; 
@@ -564,7 +541,7 @@ h1.page-subtitle{
 }
 
 h1.tema-title{
-  font-size: 210%;
+  font-size: 240%;
   text-align: center;
   /* font-family: "Muli"; */
   font-family: 'Gelasio', serif;
@@ -603,6 +580,7 @@ h1.tema-number-title{
 h1.tema-number-title::before{
   /* font-size: normal; */
   counter-increment: temaCounter; 
+  counter-reset: sectionCounter; 
   content: "§ Tema " counter(temaCounter)". " ;
 }
 
@@ -706,7 +684,7 @@ h2.number-title::before{
 /* Para praticas  */
 
 h1.page-title-practica{
-  font-size: 140%;
+  font-size: 225%;
   text-align: center;
   /* font-family: "Muli"; */
   font-family: 'Gelasio', serif;
@@ -715,34 +693,22 @@ h1.page-title-practica{
   /* margin-bottom: -5px; */
   padding: 0%;
   width: 100%;
-  color: rgb(0, 124, 191);
-  /* color: rgb(184,134,11); 
-  color: rgb(169, 90, 0); */
-
   /* color: rgba(255, 0, 0, 0.789); */
   /* color:  rgb(0,0,128);  */
-  /* color: rgb(184,134,11);  */
-  /* color: rgb(3, 89, 165);  */
-  /* color: rgb(255, 113, 4);  */
+  color: rgb(184,134,11); 
   /* font-weight: 500; */
 }
 
 h1.number-title-practica{
-  font-size: 160%;
+  font-size: 185%;
   margin-top: -1.75%;
   padding: 0.25%;
   text-align: center;
-  font-weight: 800;
+  /* font-weight: 800; */
   /* font-family: "Muli"; */
   font-family: 'Hina Mincho', serif;
-  /* color: rgb(169, 90, 0); */
-  color: rgb(0, 124, 191);
-
-  
   /* font-size: 33px; */
-  /* color: rgb(0, 124, 191);  */
-  
-  /* color: rgb(3, 89, 165);  */
+  color: rgb(3, 89, 165); 
 }
 
 h1.number-title-practica::after{
@@ -782,7 +748,7 @@ h1.number-title-practica::after{
     padding: 10px;
     border: 0px solid  rgb(218,165,32);
     margin: auto; 
-    margin-top: 50px; 
+    margin-top: 50px;
     font-size: 25px;
     width: 85%;
     box-shadow: 0px 0px 10px 0px  rgb(218,165,32);
@@ -878,7 +844,7 @@ h1.number-title-practica::after{
     color: black;
     border-radius: 20px;
     /* padding: 5%; */
-    padding: 25px;
+    padding: 20px;
     border: 0px solid  rgb(218,165,32);
     margin: auto;
     margin-bottom: 50px;
@@ -941,6 +907,7 @@ h1.number-title-practica::after{
   margin-bottom: 0px;
   margin-top: 0px;
   font-size: 20px;
+  text-align: left;
   /* width: 85%; */
   /* box-shadow: 1px 1px 5px 1px  rgb(31, 147, 201); */
 }
@@ -1115,8 +1082,9 @@ img {
   font-weight: 600;
   /* margin-bottom: 0px; */
   /* display: flex;*/
-  justify-content: center;
-  align-items: center;
+  /* justify-content: center; */
+  /* text-align: center; */
+  /* align-items: center; */
 
 }
 
@@ -1385,11 +1353,6 @@ tbody tr:nth-child(odd) {
       font-size: 14px;
   }
 
-.four-column{
-  columns: 4;
-  /*grid-template-columns: repeat(2, 1fr);*/
-}
-
 
 .three-column{
   columns: 3;
@@ -1424,8 +1387,8 @@ ol li::marker{
   counter-increment: listaCounter;
   /* font-weight: bold; */
   /*counter-reset: sublistaCounter; */
-  /* padding: 1.1px; */
-  /* font-size: 100%; */
+  padding: 1.25px;
+  /* font-size: 20px; */
 } 
 
 
