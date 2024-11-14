@@ -237,7 +237,115 @@
         $$\text{ 897=8 x 10^2 + 9 x 10^1 + 7 x 10^0}$$
       </p>
      </div>
-<!--
+
+     <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>Si $h$ es la altura en metros y $w$ el peso en kilogramos de una persona,  
+       se define el <b>índice de masa corporal</b> (<b>IMC</b>)  como:
+     </p>
+       \begin{equation}\label{eqn:imc}
+       \text{IMC}:=\frac{w}{h^{2}}
+       \end{equation}
+      
+      <p>Escribe un programa en Python que solicite al usuario que ingrese su nombre, altura 
+       (en metros) y peso (en kilogramos). Luego, utiliza la  fórmula \eqref{eqn:imc} para calcular
+       el IMC del usuario.
+       <!-- Enseguida con ayuda de la  tabla evalúa el estado de nutrición del usuario de acuerdo a la columna correspondiente su IMC 
+       
+       \begin{figure}[h!]
+       \centering
+       \includegraphics[width=.5\columnwidth]{imc}
+       \end{figure}  -->
+       Imprime un mensaje adecuado  indicando el nombre del usuario y su IMC  correspondiente:
+       
+       <center> ``Hola Benito tu índice de masa corporal es: $22.2$''</center>
+       
+       </p>
+     </div>
+
+     <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+     <p>La panadería "El Bolillo feliz"  tiene una oferta especial para aquellos que buscan aprovechar el
+       pan del día anterior. Cada pieza de pan fresco cuesta $\$3.125$ ajolopesos, pero el "pan atrasado" 
+       tiene un descuento del $60\%$ sobre su precio original. Escribe un programa en Python que solicite 
+       al usuario que ingrese la cantidad de piezas de pan fresco  y  el número de piezas de ``pan atrasado''
+       que compró. Luego, calcula el precio total sin aplicar el descuento, el descuento aplicado y el total 
+       a pagar con el descuento aplicado. Finalmente, presenta estos datos en una tabla ordenada, en donde 
+       cada valor esté formateado a dos decimales. Por ejemplo si el usuario compro $5$ piezas de pan fresco 
+       y $4$ piezas de pan atrasado imprime una tabla como la siguiente:
+      </p>
+      <center>
+      <pre>
+        ----------------------El Bolillo Feliz del H3---------------------
+        </pre>
+        <pre>
+        
+        | Piezas de pan  |   Precio  |  Descuento  |    Total a pagar     |
+        |       9        |   28.12   |     7.50    |         20.62        |
+        </pre>
+      </center>
+     </div>
+
+     <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+     <p>Crea un programa en Python que imprima la <b>tabla Pitagórica</b> que muestra los productos de todas
+      las combinaciones de números enteros desde $1$ por $1$ hasta $10$ por $10$ inclusive. La tabla
+       Pitagórica debe incluir una fila de etiquetas en la parte superior. que contenga los números del 
+       $1$ al $10$. También debe incluir etiquetas en el lado izquierdo que contengan los números del 
+       $1$ al $10$. El resultado esperado del programa se muestra a continuación: 
+    </p>
+    <center>
+      <img src="../Imagenes/tabla_pitagorica.jpg" alt="" width="110%" height="auto">
+    </center>
+     </div>
+    
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p> Un número entero positivo $n$ es <b>perfecto</b> si la suma de todos sus 
+        divisores positivos (excluido el mismo) es igual a $n$. El primer número perfecto 
+        es $6$, ya que los divisores positivos de $6$ son $1, 2, 3$ y $1 + 2 + 3 = 6$.</p>
+      
+    <p>Escribe un programa en Python que solicite al usuario un número entero positivo $n$ 
+      y determine e imprima si $n$ es un número perfecto.</p>
+    </div>
+
+     <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+    <p>Escribe un programa en Python que encuentre los cinco primeros números perfectos.</p>
+    </div>
+
+     <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>El INE desea construir un programa para contabilizar los votos. En la elección hay cinco
+        candidatos, los cuales se representan con los valores comprendidos de $1$ a $5$.
+     
+        Escribir un programa en Python que determine el número de
+        votos de cada candidato y el porcentaje que obtuvo respecto al total de los votantes.
+        El usuario ingresará los votos de manera desorganizada, tal y como se obtienen
+        en la elección, el final de datos se representa por un cero.</p>
+
+      <p>
+        Un  ejemplo del ingreso de los votos es el siguiente:
+       $$2 \, 5 \, 5\,  4\,  3\,  4\,  4\, 5\, 1\, 2\,  4\, 3\, 1\, 2\, 4\, 5\,  0$$
+      </p>
+    </div>
+
+    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <p>
+        <b>Conjetura de  ULAM</b>. Recibe su nombre en honor del matemático S. Ulam.
+        <ol>
+          <li>Inicia con cualquier número entero positivo.</li>
+          <li>Si el número es par, divídelo entre $2$. Si es impar, multiplícalo por $3$ y sumale  $1$.</li>
+          <li>Obtenga sucesivamente números enteros repitiendo el proceso. A esta sucesión se le 
+            llama <b>sucesión de Ulam</b>.
+          </li>
+        </ol>
+      </p>
+      <p>Al final, obtendra el número $1$, independientemente del entero inicial.</p>
+      
+      <p>Por ejemplo cuando el entero inicial es $26$ la sucesion de Ulam es: 
+        $$26,13,40,20,10,5, 16,8,4,2,1$$ 
+      </p>
+
+      <p>Escribir un programa en Python que solicite un número entero positivo $n$ 
+        (Validar entrada), e imprima la <b>sucesión de ULAM</b> correspondiente a $n$.
+      </p>
+    </div>
+
      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
       <p>Escribe un programa en Python que solicite al usuario dos puntos distintos en el plano
          $A(x_1,y_1)$ y $B{2}(x_2,y_2)$ (Solicita primero las coordenas del punto $A$, y despues 
@@ -262,11 +370,13 @@
         $A(x_1,y_1), B(x_2,y_2)$ y  $C(x_3,y_3)$ en el plano (primero pedir
         las coordenas del punto $A$, luego las coordenadas del punto $B$, y
         finalmente las coordenadas del punto $C$) y determina e imprime si 
-        los puntos con colineales.
+        los puntos son colineales.
       </p>
   
-      <p><b>Hint:</b> Tres puntos son colineales si se encuentran en la misma recta. Considera los casos en los que los tres puntos o 
-      un par de puntos sean iguales.</p>
+      <p><b>Hint:</b> Tres puntos son colineales si se encuentran en la misma recta. Considera los 
+        casos en los que los tres puntos o un par de puntos sean iguales imprime un mensaje apropiado 
+        para esos casos.
+      </p>
      
     </div> 
 
@@ -277,17 +387,24 @@
           a los vértices de un triángulo, calcule su  perímetro.</p>
     
         <p><b>Sugerencia:</b> Calcule la distancia entre cada par de puntos para conocer la longitud de
-         los lados del triángulo. </p>
+         los lados del triángulo y utiliza la fórmula de Heron. </p>
       </div>
   
 
      
-  
+<!--   
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
         <p>Escribir un programa en Python  que lea tres números reales, determine cual es el
           mayor de ellos y lo imprima.
       </p>
       </div>
+      
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Escribir un programa en Python   que reciba  tres enteros e imprima un mensaje
+          que indique si están o no en orden ascendente, imprima "Ordenados" en caso afirmativo o
+          "No ordenados" en caso contrario.</p>
+      </div>
+   -->
   
   
   
@@ -314,12 +431,7 @@
           \end{equation}
       </div>
   
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-        <p>Escribir un programa en Python   que reciba  tres enteros e imprima un mensaje
-          que indique si están o no en orden ascendente, imprima "Ordenados" en caso afirmativo o
-          "No ordenados" en caso contrario.</p>
-      </div>
-  
+     
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
         <p> <p>Escribir un programa en Python  que reciba tres puntos $A(x_1,y_1), B(x_2,y_2)$ y  $C(x_3,y_3)$  ingresados 
           por el usario (Primero pedir las coordenas del punto $A$, luego las coordenadas del punto $B$, y finalmente las coordenadas 
@@ -330,10 +442,26 @@
         un par de puntos sean iguales.</p></p> 
       </div>
   
-      
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>
+         El zodíaco Chino asigna animales a los años en un ciclo de $12$ años. En la siguiente tabla
+         se muestra un ciclo de $12$ años. El patrón se repite a partir de ahí, siendo $2012$ otro 
+         año del dragón y $1999$ otro año de la liebre.
+        </p>
+ 
+         <center>
+         <img src="../Imagenes/Zodiaco_chino.jpg" alt="", width="50%" height="auto">
+         </center>
+         <p>
+           Escriba un programa en Python que solicite al usuario un año y muestre el animal asociado
+           con ese año. El  programa debe funcionar correctamente para cualquier año mayor o igual a
+           cero, no solo para los enumerados en la tabla.
+         </p>
+       </div>
+
+      <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
         <p>Crea un programa en Python que solicite al usuario un  número menor que 50 y luego impria hacia atras desde $50$ a ese número.</p>
-      </div>
+      </div> -->
         
 
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
@@ -341,22 +469,15 @@
         </p>
       </div>
 
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-        <p>       Crea un programa en Python que solicite al usuario que ingrese un número y luego ingrese un segundo número. Suma estos dos números y enseguida pregunta al usuario si quiere añadir otro número. Si introducen \"Y\" o \"y\" (Yes), pídele que introduzca otro número y sigue añadiendo números hasta que no respondan \"y\" o \"Y\". Una vez que el bucle se haya detenido, muestra el total.
+      <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python que solicite al usuario que ingrese un número y luego ingrese 
+          un segundo número. Suma estos dos números y enseguida pregunta al usuario si quiere 
+          añadir otro número. Si introducen \"Y\" o \"y\" (Yes), pídele que introduzca otro número
+           y sigue añadiendo números hasta que no respondan \"y\" o \"Y\". Una vez que el bucle se haya
+          detenido, muestra el total.
         </p>
-      </div>
-
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-        <p>
-          Escribir un programa en Python que lea un número entero positivo $n$ (validar entrada)
-          e invierta sus dígitos, imprima el número resultante.  
-        </p>
-      </div>
+      </div> -->
   
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-        <p> Escribir un programa en Python que lea un número entero positivo $n$ (validar entrada)
-          y determine si $n$ es palindromo. Imprima un mensaje adecuado.  </p>
-      </div>
   
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
         <p>Escribir un programa en Python que lea un número entero positivo $k$ 
@@ -409,51 +530,7 @@
           </p>
       </div>
   
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-        <p> Un número entero positivo $n$ es <b>perfecto</b> si  la suma de todos sus 
-          divisores positivos (excluido el mismo) es igual a $n$.El primer número perfecto 
-          es $6$, ya que los divisores positivos de $6$ son $1, 2, 3$ y $1 + 2 + 3 = 6$.</p>
-        
-      <p>Escribir un programa que encuentre los cinco primeros 
-            números perfectos.</p>
-      </div>
-
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-        <p>
-          <b>Conjetura de  ULAM</b>. Recibe su nombre en honor del matemático S. Ulam.
-          <ol>
-            <li>Inicia con cualquier número entero positivo.</li>
-            <li>Si el número es par, divídelo entre $2$. Si es impar, multiplícalo por $3$ y sumale  $1$.</li>
-            <li>Obtenga sucesivamente números enteros repitiendo el proceso. A esta sucesión se le 
-              llama <b>sucesión de Ulam</b>.
-            </li>
-          </ol>
-        </p>
-        <p>Al final, obtendra el número $1$, independientemente del entero inicial.</p>
-        
-        <p>Por ejemplo cuando el entero inicial es $26$ la sucesion de Ulam es: 
-          $$26,13,40,20,10,5, 16,8,4,2,1$$ 
-        </p>
-  
-        <p>Escribir un programa en Python que solicite un número entero positivo $n$ 
-          (Validar entrada), e imprima la <b>sucesión de ULAM</b> correspondiente a $n$.
-        </p>
-      </div>
-
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-        <p>El INE desea construir un programa para contabilizar los votos. En la elección hay cinco
-          candidatos, los cuales se representan con los valores comprendidos de $1$ a $5$.
-       
-          Escribir un programa en Python que determine el número de
-          votos de cada candidato y el porcentaje que obtuvo respecto al total de los votantes.
-          El usuario ingresará los votos de manera desorganizada, tal y como se obtienen
-          en la elección, el final de datos se representa por un cero.</p>
-  
-        <p>
-          Un  ejemplo del ingreso de los votos es el siguiente:
-         $$2 \, 5 \, 5\,  4\,  3\,  4\,  4\, 5\, 1\, 2\,  4\, 3\, 1\, 2\, 4\, 5\,  0$$
-        </p>
-      </div>
+   
 
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
         <p>El valor de $\pi$ se puede aproximar mediante la <b>serie de Liebniz</b>.</p>
@@ -655,9 +732,10 @@
           
      
 
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-       <p>Crea un programa en Python que solicite al usuario un  número menor que 50 y luego imprima hacia atras desde $50$ a ese número.</p>
-      </div>
+      <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+       <p>Crea un programa en Python que solicite al usuario un  número menor que 50 y 
+        luego imprima hacia atras desde $50$ a ese número.</p>
+      </div> -->
 
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
        <p>Crea un programa en Python que solicite al usuario números enteros hasta que la suma 
@@ -666,15 +744,15 @@
       </p>
       </div>
 
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
        <p>Crea un programa en Python que solicite al usuario que ingrese un número y luego ingrese 
         un segundo número. Suma estos dos números y enseguida pregunta al usuario si quiere añadir 
         otro número. Si introducen "Y" o "y" (Yes), pídele que introduzca otro número y sigue añadiendo 
         números hasta que no respondan "y" o "Y". Una vez que el bucle se haya detenido, muestra el total.
        </p>
-      </div>
+      </div> -->
 
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+      <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
         <p>
           El Dr. Watson ha  ocultado una fórmula secreta para un nuevo tipo de combustible. 
           Sin embargo, ha dejado una serie de instrucciones codificadas para quien desee encontrarla:
@@ -697,50 +775,13 @@
           Finalmente, implemente el 
           módulo  Turtle para mostrar los movimientos que se tienen que realizar. 
         </p>
-      </div>
+      </div> -->
       
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-       <p>
-        El zodíaco Chino asigna animales a los años en un ciclo de $12$ años. En la siguiente tabla
-        se muestra un ciclo de $12$ años. El patrón se repite a partir de ahí, siendo $2012$ otro 
-        año del dragón y $1999$ otro año de la liebre.
-       </p>
-
-        <center>
-        <img src="../Imagenes/Zodiaco_chino.jpg" alt="", width="50%" height="auto">
-        </center>
-        <p>
-          Escriba un programa en Python que solicite al usuario un año y muestre el animal asociado
-          con ese año. El  programa debe funcionar correctamente para cualquier año mayor o igual a
-          cero, no solo para los enumerados en la tabla.
-        </p>
-      </div>
+      
 
       
 
-      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-       <p>Si $h$ es la altura en metros y $w$ el peso en kilogramos de una persona,  
-        se define el <b>índice de masa corporal</b> (<b>IMC</b>)  como:
-      </p>
-        \begin{equation}\label{eqn:imc}
-        \text{IMC}:=\frac{w}{h^{2}}
-        \end{equation}
-       
-       <p>Escribe un programa en Python que solicite al usuario que ingrese su nombre, altura 
-        (en metros) y peso (en kilogramos). Luego, utiliza la  fórmula \eqref{eqn:imc} para calcular
-        el IMC del usuario.
-        Enseguida con ayuda de la  tabla evalúa el estado de nutrición del usuario de acuerdo a la columna correspondiente su IMC 
-        
-        \begin{figure}[h!]
-        \centering
-        \includegraphics[width=.5\columnwidth]{imc}
-        \end{figure} 
-        Imprime un mensaje adecuado  indicando el nombre del usuario y su IMC  correspondiente:
-        
-        <center> ``Hola Benito tu índice de masa corporal es: $22.2$''</center>
-        
-        </p>
-      </div>
+     
 
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
        <p>Escribe un programa en Python que solicite al usuario un número entero positivo $N$ menor 
@@ -753,7 +794,7 @@
       </p>
 
       </div>
-
+<!--
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
        <p>Un excelente día de verano, dos estudiantes de Actuaría nadaban en una de 
         las hermosas playas de Huatulco e iban recolectando ostiones. Habían estado nadando
@@ -804,8 +845,33 @@
               <li>Fin</li>
               </ol>
             </div>
-          </div> -->
-    </div>
+          </div> 
+    </div>-->
+
+      <!-- Donde aparecerá la fecha de la última modificación -->
+   <footer>
+    <center>
+     <p id="ultima-actualizacion"></p>
+    </center>
+</footer>
+<script>
+  // Obtenemos la fecha y hora de la última modificación del documento
+  const fechaModificacion = new Date(document.lastModified);
+  
+  // Opciones para formatear la fecha (por ejemplo, DD/MM/AAAA)
+  const opcionesFecha = { day: '2-digit', month: '2-digit', year: 'numeric' };
+  const fechaFormateada = fechaModificacion.toLocaleDateString('es-ES', opcionesFecha);
+
+  // Obtenemos la hora (HH:MM:SS)
+  const horaFormateada = fechaModificacion.toLocaleTimeString('es-ES', {
+      hour: '2-digit', minute: '2-digit'
+  });
+
+  // Insertamos la fecha y la hora en el elemento con el ID "ultima-modificacion"
+  document.getElementById("ultima-actualizacion").textContent = `Última actualización: ${fechaFormateada}`;
+</script>
+
+
 
   </body>
     
