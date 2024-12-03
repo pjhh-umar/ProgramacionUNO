@@ -250,7 +250,7 @@
        \end{figure}  -->
        Imprime un mensaje adecuado  indicando el nombre del usuario y su IMC  correspondiente:
        
-       <center> ``Hola Benito tu índice de masa corporal es: $22.2$''</center>
+       <center> <code>'Hola Benito tu índice de masa corporal es: $22.2$'</code></center>
        
        </p>
      </div>
@@ -259,7 +259,7 @@
      <p>La panadería "El Bolillo feliz"  tiene una oferta especial para aquellos que buscan aprovechar el
        pan del día anterior. Cada pieza de pan fresco cuesta $\$3.125$ ajolopesos, pero el "pan atrasado" 
        tiene un descuento del $60\%$ sobre su precio original. Escribe un programa en Python que solicite 
-       al usuario que ingrese la cantidad de piezas de pan fresco  y  el número de piezas de ``pan atrasado''
+       al usuario que ingrese la cantidad de piezas de pan fresco  y  el número de piezas de <code>pan atrasado</code>
        que compró. Luego, calcula el precio total sin aplicar el descuento, el descuento aplicado y el total 
        a pagar con el descuento aplicado. Finalmente, presenta estos datos en una tabla ordenada, en donde 
        cada valor esté formateado a dos decimales. Por ejemplo si el usuario compro $5$ piezas de pan fresco 
@@ -739,7 +739,7 @@
          \end{align*}
        </p>
       </div>
-  
+    -->
       <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
         <p>Para encontrar el Máximo Común Divisor (MCD) de 
           dos números se puede implementar el <b>algoritmo de Euclides</b>:</p>
@@ -774,11 +774,149 @@
           pares. 
         </p>
       </div>
-      
+
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python que dado un diccionario imprima  (mediante un mensaje adecuado) 
+          el primer <b>valor</b> más largo del diccionario. Por ejemplo, el siguiente diccionario es:
+        </p>
+        <p>
+          <pre>frutas = {'fruta': 'manzana', 'color': 'verde'}</pre>
+        </p>
+        <p>
+           Se debe imprimir <code>manzana</code> pues es el primer  valor más largo.
+        </p>
+          
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python que tome una lista de cadenas de números como argumento, 
+          la convierte en números enteros y calcule e imprima la suma de la lista. Por ejemplo, si la
+          lista de cadenas de números es: <code>['1', '3', '5']</code> debe convertirse en 
+          <code>[1, 3, 5]</code> y e imprimir (mediante un mensaje adecuado)  a <code>9</code>.</p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python tome una lista de cadenas verifique si la lista tiene cualquier duplicado.
+          Si hay duplicados, se deben imprimir los duplicados. Si no hay duplicados, se debe imprimir
+          <b>"Sin duplicados"</b>. Por ejemplo, si la lista es  <code>frutas</code> como a continuación 
+          debería devolver <code>manzana</code> y la lista de <code>nombres</code> debería devolver 
+          <b>"Sin duplicados"</b>.
+        </p>
+        <p>
+          <code>frutas = ['manzana', 'naranja', 'plátano', 'manzana']</code><br><br>
+          <code>nombres = ['Daniela', 'Nayeli', 'Sarah', 'Jasubilene', 'Itiel', 'Yamil', 'Nestor', 'Orlando']</code>
+        </p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python que tomé un el diccionario <code>registro</code> y verifique cuántos de
+          los estudiantes si asistieron a la escuela. En el diccionario <code>registro</code> las claves
+          corresponden a las matriculas de los estudiantes y el valor correspondientes es
+          <code>'Si'</code> o <code>'No'</code>. Si el alumno fue a la escuela, el diccionario dice <code>'Si'</code>. 
+          Si el alumno no asistió a la escuela, el diccionario dice <code>'No'</code>. El programa debe imprimir el número
+          de estudiantes que asistieron a la escuela. Por ejemplo,  utilizando el siguiente diccionariose debe imprimir 
+          <code>3</code> (Utiliza un mensaje adecuado).
+        </p>
+        <p>
+          <code> registro = {'2023260134':'Si','2023260135': 'No', '2023260136':'Si', '2023260137': 'No', '2023260138':'Si', '2023260139':'Si', '2023260140':'Si', '2023260141':'No', '2023260142':'No'}</code>
+        </p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python que dada una lista de cadenas, imprima el índice de la primera palabra más larga de la lista. 
+          Por ejemplo, si la lista es: </p>
+          <p>
+            <code>
+              palabras1 = ["Odio", "Remordimiento", "Venganza"]
+            </code>
+          </p>
+          <p>
+            se debe imprimir <code>2</code>. Mientras que si la lista es:
+          </p>
+          <p>
+            <code>palabras2 = ["Amor", "Odio"]</code>
+          </p>
+          <p>se debe imprimir <code>0</code>.</p>
+        
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p> El departamento de servicios escolares de la Universidad del Mar Campus Huatulco sabe que eres 
+          un excelente programador y  solicita de tu apoyo para saber cuántos estudiantes, mujeres y hombres, 
+          están matriculados en la universidad. Servicios Escolares ha guardado el sexo de cada uno de los 
+          estudiantes en una lista. Crea un programa en Python  que determine cuántos hombres y cuantas 
+          mujeres hay en la lista, almacena esta información en un diccionario. Por ejemplo si la lista es:
+        </p>
+        <p>
+          <code>estudiantes = ['Hombre', 'Mujer', 'mujer', 'hombre', 'hombre', 'hombre', 'mujer', 'hombre', 'Mujer', 'Hombre', 'Mujer', 'Hombre' , 'mujer']</code>
+        </p>
+        <p>Se debe imprimir el siguiente  diccionario:</p>
+        <p>
+          <code>{'Hombres':7 'Mujeres':6}</code>
+        </p>
+        <p><b>Observación:</b> A veces se guardo <code>'mujer'</code> o <code>'Mujer'</code> o bien <code>'Hombre'</code> o <code>'hombre'</code></p>
+          
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python que dada una lista de nombres  guarde en un diccionario los nombres
+          que comienzan con "S" (<code>claves</code>) y la cantidad de veces que este aparece en la lista
+          (<code>valores</code>). Por ejemplo si la lista es:
+        </p>
+        <p>
+          <code>
+            nombres = ["Sofia","Saul", "Jorge", "Samantha","Jonathan", "Sofia", "Juan", "Joaquin", "Diana", "Daniela", "Sarah", "Sofia", , "Samantha"]
+          </code>
+        </p>
+        <p>
+          Se debe imprimir el siguiente diccionario: <code>{“Sofia”: 3, “Saul”: 1, , "Sarah": 1, "Samantha": 1}</code>
+        </p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python dada una lista de números enteros, determina e imprima la diferencia 
+          entre el número par más grande de la lista y el número impar más pequeño de la lista. Por ejemplo,
+          si la lista es: <code>[1,2,4,6]</code> se debe imprimir <code>6 -1= 5</code></p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python que solicite al usuario un número entero positivo $n$ e imprima 
+          una lista de todos los números primos menores o iguales que $n$. Por ejemplo, si el usuario
+          ingresa <code>10</code>, se debe imprimir la lista <code>[2, 3, 5, 7]</code>.</p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Cree un programa en Python que solicite al usuario que ingrese una cadena de números y
+          determine e imprima el digito impar más grande de la cadena. Por ejemplo, si  el usuario
+          ingresa <code>'23569'</code>,  la función debe imprimir <code>9</code>.
+        </p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Crea un programa en Python que dada una lista de números. Si la lista tiene ceros (<code>0</code>), 
+          se deben <code>mover</code> estos al final de la lista y manteniendo el orden de los demás números de la lista.
+          Si no hay ceros en la lista, ordenar la lista original en orden ascendente. En ambos casos imprimir 
+          la lista resultante. Por ejemplo, si la lista es  <code>[1, 4, 6, 0, 7,0,9]</code>  es se debe imprimir
+          <code>[1,4, 6, 7, 9, 0, 0]</code>. Mientras que, si  la lista es <code>[2, 1, 4, 7, 6]</code> entonces se debe imprimir 
+          <code>[1, 2, 4, 6, 7]</code>.</p>
+      </div>
+
+      <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+        <p>Escribe un programa en Python que lea una línea de texto y determine e imprima el número de 
+          ocurrencias de cada palabra en la cadena. También imprime el número total de palabras únicas 
+          <center>
+          <img src="../Imagenes/contador_palabras.png" alt="", width="25%" height="auto">
+          </center>
+        </p>
+        <p>
+          <b>Sugerencia:</b> Usa el método Split
+        </p>
+      </div>
 
     
           
-      -->
+      
 
       <!-- <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
        <p>Crea un programa en Python que solicite al usuario un  número menor que 50 y 
@@ -854,9 +992,7 @@
 
 
 <!-- 
-    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-      <p></p>
-    </div>
+    
     <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
       <p></p> -->
       <!-- <button class="respButton hvr-grow ">  Solución       </button>
