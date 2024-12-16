@@ -1,0 +1,22 @@
+SALDO_INICIAL  $ 2300 
+TRANSACCION      MONTO
+Retiro         $ 208783
+Deposito       $ 943732
+Retiro         $   3680
+Deposito       $ 638816
+Deposito       $ 154736
+Retiro         $ 961448
+Deposito       $ 705596
+Retiro         $ 263955
+Deposito       $ 120121
+Deposito       $ 729362
+Retiro         $ 398391
+Retiro         $ 950909
+Retiro         $ 814989
+Deposito       $  95639
+Deposito       $ 500700
+Deposito       $ 478728
+Deposito       $  36215
+Retiro         $ 179137
+Deposito       $ 233584
+Deposito       $ 642791
