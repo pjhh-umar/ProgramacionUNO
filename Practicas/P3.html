@@ -45,7 +45,7 @@
     <!-- This part restart counter of cards to start at n+1 -->
     <style>
       body.fondo-body{
-        counter-reset: temaCounter 1 sectionCounter;
+        counter-reset: temaCounter 3 sectionCounter;
       }
      
       h1.page-title-practica{
@@ -100,10 +100,333 @@
 
   <body class="fondo-body" ><h1 class="page-title-practica"> Prácticas 3 </h1>   
 
-    <div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
-      <p>
-      </p>
-      </div>
 
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribir un programa en Python que solicite al usuario una contraseña (cadena de caracteres) y determine si esta es una buena contraseña o no. Diremos que una <b>buena contraseña</b> es aquella que cumple las siguientes características:</p>
+      <p>La contraseña debe tener al menos 8 caracteres.</p>
+      <p>Contenga al menos una letra mayúscula.</p>
+      <p>Contenga al menos una letra minúscula.</p>
+      <p>Contenga al menos un número.</p>
+      <p>Imprime mediante un mensaje adecuada si la contraseña que se ingreso es una buena contraseña o no.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que que solicite al usuario ingresar una sucesión finita de números separados por comas y generé e imprima una lista y una tupla cada uno de los números de la sucesión. Por ejemplo, si la sucesión de números es:</p>
+      <p><code>34,67,55,33,12,98</code></p>
+      <p>entonces se debe imprimir:</p>
+      <p><code>['34', '67', '55', '33', '12', '98']</code> y <code>('34', '67', '55', '33', '12', '98')</code></p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que solicite al usuario ingresar una sucesión finita de palabras separadas por comas e imprima las palabras separadas por comas pero en orden alfabético. Por ejemplo, si el usuario ingresa:</p>
+      <p><code>Seguros, Matemáticas, Riesgo, Finanzas, Estadística</code></p>
+      <p>Entonces se debe imprimir:</p>
+      <p><code>Estadística, Finanzas, Matemáticas, Riesgo, Seguros</code></p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que solicite al usuario ingresar una sucesión de palabras separadas por espacios, luego remueva todas las palabras duplicadas e imprimalas en orden alfabético.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que solicite al usuario que ingrese una sucesión de números binarios de 4 dígitos separados por comas y determina si estos son o no divisibles entre 5 e imprimelos separados por comas aquellos que si lo sean.</p>
+      <p><b>Sugerencia:</b> Utiliza la función <code>int()</code>. La función <code>int()</code> se utiliza para convertir una cadena válida a un número entero. Puede recibir un segundo argumento y tiene múltiples formas de uso, pero en el contexto de números binarios, una de las formas más comunes es la conversión de una cadena de dígitos binarios a un número entero. Por ejemplo</p>
+      <pre><code>cadena_binaria = '1101' # cadena_binaria es una cadena que representa un número binario.
+    numero_decimal = int(cadena_binaria, 2) #2 en el segundo argumento (el cual es opcional)
+    # que indica que la cadena de entrada está en base 2 (binario).
+    print(numero_decimal)</code></pre>
+    </div>
+
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que solicite al usuario que ingrese una cadena (esta puede ser incluso una línea de texto). Luego, utiliza un diccionario para almacenar el número de letras y dígitos que hay en la cadena. Imprime el resultado final mediante un mensaje adecuado.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que solicite al usuario que ingrese una cadena (esta puede ser incluso una línea de texto). Luego, utiliza un diccionario para almacenar el número de letras mayúsculas y letras minúsculas que hay en la cadena. Imprime el resultado final mediante un mensaje adecuado.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que lea el archivo <b>estado_cuenta.txt</b> el cual es el estado de cuenta de un cliente del Banco del Bienestar. Luego, basado en el saldo inicial indicado en el archivo y el registro de las transacciones: <i>Depósitos</i> o <i>Retiros</i> y los montos respectivos indicados en el archivo, imprime el saldo final del cliente.</p>
+      <p><a href="https://drive.google.com/file/d/14ReM5-uuCym8sF2oCmN-333gudu0PA5p/view?usp=sharing" download>Descargar estado_cuenta.txt</a></p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que solicite al usuario una contraseña (cadena de caracteres) y determine si esta es una <b>muy buena contraseña</b> o no. Diremos que una <b>muy buena contraseña</b> es aquella que cumple las siguientes características:</p>
+      <p>La contraseña debe tener al menos 8 caracteres.</p>
+      <p>La contraseña debe a lo más 12 caracteres.</p>
+      <p>Contenga al menos una letra mayúscula.</p>
+      <p>Contenga al menos una letra minúscula.</p>
+      <p>Contenga al menos un número.</p>
+      <p>La contraseña debe tener al menos un caracter del conjunto {$,@,#}.</p>
+      <p>Imprime mediante un mensaje adecuado si la contraseña ingresada es una muy buena contraseña o no.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>En el archivo información.txt se encuentran almacenados en cada línea el <i>nombre, edad</i> y <i>altura</i> de los estudiantes de la carrera de Actuaría de la Universidad del Mar. Escribe un programa en Python que almacene en una lista, las tuplas <code>(nombre, edad, altura)</code> en orden ascendente donde el <code>nombre</code> es una cadena, la <code>edad</code> y la <code>altura</code> son números. El criterio de clasificación es siguiente:</p>
+      <p>Primero ordenar según el nombre;</p>
+      <p>Luego ordenar según la edad;</p>
+      <p>Luego ordenar por altura.</p>
+      <p>La prioridad es entonces: nombre -> edad -> altura.</p>
+      <p><a href="https://drive.google.com/file/d/197SGwx77FTi1oQyZyY9HcpHyp-R3-mL_/view?usp=sharing" download>Descargar información.txt</a></p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Crea una función en Python llamada <code>caracter</code> que reciba una cadena y devuelva una lista de los caracteres únicos de la cadena de texto.</p>
+    </div>
+
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Crea una función en Python llamada <code>caracter</code> que reciba una cadena y devuelve una lista de los caracteres únicos de la cadena de texto.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Crea una función en Python llamada <code>caracteres</code> que reciba una cadena y devuelve una lista con los caracteres de la cadena de texto, cada caracter de la cadena debe aparecer solo una vez en la lista.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Crea una función llamada <b>mediana</b> que tome tres números como parámetros y devuelva la mediana de esos parámetros como resultado.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en Python que se llame <code>hipotenusa</code> y que reciba las longitudes de los dos catetos (lados más cortos) de un triángulo rectángulo como sus parámetros y devuelva el valor de la hipotenusa del triángulo, calculada mediante el teorema de Pitágoras. Fuera de la función se deben solicitar al usuario las longitudes de los catetos del triángulo rectángulo, luego llama a la funcion <code>hipotenusa(cateto1,cateto2)</code> para calcular la longitud de la hipotenusa y muestre el resultado.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Un minorista en línea ofrece envío exprés para muchos de sus artículos a una tarifa de \$10.95 para el 
+        primer artículo de un pedido y \$2.95 para cada artículo subsiguiente en el mismo pedido. Escribe una función 
+        que se llame <code>gasto_envio</code> que reciba el número de artículos en el pedido como su único parámetro. 
+        Devuelve los gastos de envío del pedido como resultado de la función. Fuera de la función solicite al usuario 
+        que ingrese la cantidad de artículos comprados e imprime el cargo de envío.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>En un Bahias de Huatulco, el costo del servicio de taxi consiste en una <b>tarifa base</b> de \$5.00
+         pesos más \$2.5 por cada 120 metros recorridos. Escribe una función en Python que se llame 
+         <code>tarifa_taxi</code> que reciba como parametro la distancia recorrida (en kilómetros) como único 
+         parámetro y devuelva la tarifa total como único resultado. Fuera de la función solicita al usuario 
+         la distancia recorrida en kilómetros y luego llame a la función <code>tarifa_taxi(distancia)</code> para
+        calcular el costo total e imprima el resultado.</p>
+      <p><b>Sugerencia:</b> Las tarifas de los taxis cambian con el tiempo. Utiliza constantes para representar la tarifa base y la parte variable de la tarifa para que el programa se pueda actualizar fácilmente cuando aumenten las tarifas.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Si tienes $3$ popotes, posiblemente de diferentes longitudes, puede o no ser posible colocarlos de manera que formen un triángulo cuando sus extremos se toquen. Por ejemplo, si todas los popotes tienen una longitud de $6$cm, entonces uno puede construir fácilmente un triángulo equilátero usándolas. Sin embargo, si un popote mide $6$ cm de largo, mientras que las otras dos miden sólo $2$ cm cada una, entonces no se puede formar un triángulo. De manera más general, si cualquier longitud es mayor o igual que la suma de las otras dos, entonces las longitudes no se pueden usar para formar un triángulo. De lo contrario, pueden formar un triángulo. Esta propiedad es conocida como <b>Desigualdad del triángulo</b>.</p>
+      <p>Escribe una función <code>check_triangulo</code> que determine si tres longitudes pueden o no formar un triángulo. La función recibe 3 parámetros y devolverá un resultado booleano. Si alguna de las longitudes es menor o igual a $0$, su función debería devolver <code>False</code>. De lo contrario, debe determinar si las longitudes se pueden usar o no para formar un triángulo usando el método descrito en el párrafo anterior e imprimir el resultado apropiado. Además, escriba un programa que solicite al usuario las 3 longitudes del usuario y llame a la funcion <code>check_triangulo</code>.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en python llamada <code>segundo_maximo</code> que reciba como argumento una lista de números, elimine de dicha lista los valores repetidos y luego encuentre y devuelva el segundo número más grande.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escriba una funcion en Python que se llame <code>celcius_fahrenheit</code> que reciba como argumento un número que representa la temperatura de una habitación en grados Celsius, y devuelva la temperatura en grados Fahrenheit.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escriba una función en python que se llame <code>factores_primos</code> que reciba como parametro un número entero positivo e imprima la descomposición en factores primos del número.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escriba una función que se llama <code>factores_comunes</code> que reciba como parametro dos números enteros positivos e imprima los factores primos comunes de ambos números.</p>
+    </div>
+
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en python llamada <code>invierte_digitos</code> que reciba como parametro un número entero positivo y devuelva el número obtenido invirtiendo el orden de los dígitos de un número dado.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en Python llamada <code>segundos</code> que reciba como argumento un tiempo dado en horas, minutos y segundos (hh:mm:ss), calcule y devuelva la cantidad de segundos en el tiempo dado.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en Python llamada <code>minutos</code> que reciba como argumento un tiempo dado en horas, minutos y segundos (hh:mm:ss), calcule y devuelva la cantidad de minutos en el tiempo dado.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en Python llamada <code>horas</code> que reciba como argumento un tiempo dado en horas, minutos y segundos (hh:mm:ss), calcule y devuelva la cantidad de horas en el tiempo dado.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en python que solicite al usuario dos tiempos expresados en horas, minutos y segundos; los sume y devuelva el resultado en horas, minutos y segundos.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en Python que reciba una lista de números enteros y devuelva el mayor producto de dos de ellos. Por ejemplo, si recibe los números la lista <code>[1, 5, -2, -4]</code> debe devolver <code>8</code>, que es el producto más grande que se puede obtener entre ellos.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que reciba como argumento una cadena de texto e imprima el numero de letras mayusculas y letras minusculas en la cadena.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que reciba como argumento un número entero positivo  𝑛  e imprima las primeras  𝑛  filas del triangulo de Pascal.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que dado una lista de números enteros devuelve la suma de todos los números positivos de la lista. Si la lista está vacía o no hay números positivos, devuelve 0.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que dado una lista de números enteros devuelve la media de todos los números positivos y la media de todos los números de la lista. Si la lista está vacía o no hay números distintos de cero, devuelve 0.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python dado un diccionario con cuyas entradas (clave-valor) son el nombre y la edad de un grupo de personas, imprima el nombre la persona de mayor edad, el nombre de la persona de menor edad asi como sus respectivas edades y la diferencia de las edades.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en Python llamada <code>revisa_duplicados</code> que reciba como argumentos al menos un par de listas. La función debe verificar si las listas tienen duplicados en común. Si hay duplicados, la función debe devolver una lista con los elementos duplicados. Si no hay duplicados, la función debería devolver el mensaje "<i>Sin duplicados</i>".</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Generar aleatoriamente  10  números enteros entre  −100  y  100 , almacenarlos en una lista. Escribir un programa en Python que determine cuantos de ellos son positivos, cuantos negativos y cuantos igual cero.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribir un programa en python que simule una ruleta con números entre  0  y  100  (incluyendo estos), el algoritmo debe cumplir con lo siguiente: El algoritmo debe mandar un mensaje al usuario indicandole que presione cualquier tecla para comenzar a girar la ruleta.El numero obtenido al hacer girar la ruleta, es generado por el algoritmo de forma pseudoaleatoria. El algoritmo debe imprimir  50  puntos sucesivos simulando el suspenso (la espera mientras termina de girar la ruleta), entre punto y punto Esperar  150  Milisegundos. Cuando se termine de imprimir los puntos suspensivos limpiar la pantalla e imprimir un mensaje mostrando cual fue  el número obtenido en la ruleta.</p>
+      <pre><code>import time
+    print("Linea uno")
+    time.sleep(0.35)
+    print("Linea dos")
+    
+    from google.colab import output
+    print("Linea uno")
+    time.sleep(3)
+    output.clear()
+    print("Linea dos")
+    
+    
+    import time
+    from google.colab import output
+    import random
+    
+    x = input("Presion cualquier tecla para continuar")
+    output.clear()
+    time.sleep(0.5)
+    for i in range (0,10):
+      print(' . ', end="")
+      time.sleep(0.35)
+    output.clear()
+    print("El numero obtenido es:", random.randint(0,100))
+    </code></pre>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribir un programa en Python que simule una ruleta (con las características del ejercicio anterior) con números entre  0  y  20 , girar la ruleta continuamente hasta que el número obtenido sea igual a  0 . Mostrar un mensaje adecuado antes de comenzar cada giro de la ruleta e imprimir el número obtenido en cada giro. Crea una función que simule el giro de la ruleta y devuelva el número obtenido.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en Python llamada <code>cuenta_estudiantes</code> que verifique cuántos estudiantes hay en una escuela. La función recibe como argumento un diccionario. Las claves corresponden a las matriculas de los estudiantes mientras que el correspondiente valor es o bien la cadena 'si' si el estudiante está en la escuela o bien la cadena 'no' si el estudiante no está en la escuela. La función debe devolver el número de estudiantes que se encuentran en la escuela. Por ejemplo mandando a la función el siguiente diccionario la función debe devolver <code>3</code>.</p>
+      <pre><code>registro = {'2021260159':'si','2022260118': 'no', '2022260137':'si', '2022260119': 'si', '2022260121': 'no'}</code></pre>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>En una lista se almacenan las calificaciones obtenidas por un grupo de  50  alumnos en un examen. Cada calificación es un número entero comprendido entre  0  y  5 , generar estas aleatoriamente. Escribir un programa en Python que calcule, almacene e imprima la frecuencia de cada una de las calificaciones, y que además obtenga e imprima la calificación cuya frecuencia fue la más alta. Si hubiera calificaciones con la misma frecuencia, imprimir ambas.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que lea un lista de seis elementos e intercambie las posiciones de sus elementos, de tal forma que el primer elemento pase a ser el último y el último el primero, el segundo el penúltimo y así sucesivamente, e imprima lista resultante.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que lea usuario las coordenadas de dos puntos:  $A(x_{1},x_{2})$  y
+        $B(x_{1},x_{2})$, utiliza una función para validar que en efecto los puntos ingresados son puntos
+        distintos. Luego,  determine e imprima la distancia entre $A$ y $B$ . Escribe una función para determinar
+        la distancia entre dos puntos.
+      </p>
+      <!-- <p><b>Hint:</b> Si $A(x_{1},x_{2})$ ,  $B(x_{1},x_{2})$  puntos en el plano. Entonces, la distancia 
+        entre los puntos  $A$ y $B$  se determina mediante la siguiente fórmula:  $d(A,B)= \sqrt{()}</p> -->
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que solicite lea las coordenadas de dos puntos en el plano: 
+        $A(x_{1},y_{1})$  y  $B(x_{2},y_{2})$ , determine y devuelva la pendiente de la recta que pasa
+        por estos puntos. Utilice un función para determinar la pendiente de la recta que pasa por dos puntos.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que lea las coordenadas de tres puntos en el plano:  
+        $A(x_{1},y_{1})$ ,  $B(x_{2},y_{2})$  y   $C(x_{3},y_{3})$ . luego determine e
+        imprima si los puntos con colineales.
+        Implementa funciones en python.</p>
+      <p><b>Hint:</b> Tres puntos son colineales si se encuentran en una misma linea recta. Considera los
+        casos en los que los tres puntos o un par de puntos sean iguales.</p>
+    </div>
+
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una función en Python que reciba como parametros las coordenadas de dos puntos $(x_{1},y_{1})$ y 
+        $(x_{2},y_{2}})$  e imprima la ecuación de la recta en su forma punto-orenada al origen que pasa por estos puntos. Por ejemplo si la funcion recibe como argumentos  (1,0)  y  (5,6)  se debe imprimir la ecuación:  𝑦=𝑥+1 .</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>El <b>problema de Monty Hall</b> es un problema de probabilidad inspirado en un viejo concurso de televisión llamado <i>Let's Make a Deal</i> (``Hagamos un trato'').</p>
+      <p>El problema consiste en que un concursante tiene delante tres puertas, detrás de una de ellas hay un auto nuevo y en las otras dos hay una cabra en cada una, el concursante debe adivinar en cuál puerta está el vehículo. Sin embargo, una vez que el concursante elige una de las puertas y lo anuncia ante el público, <b>Monty Hall</b> (el presentador, quien además sabe que hay detrás de cada puerta) abre una de las puertas donde hay una cabra y le da la opción al concursante de cambiar la puerta que eligió. surgen entonces un par de preguntas interesantes: ¿Debe el concursante mantener su elección original o escoger la otra puerta? ¿Cambiar de puerta puede influir en el resultado del concurso?</p>
+      <p>Escribe un programa en python que simule  10000  veces el <b>concurso de Monty Hall</b> cuando el concursante decide cambiar de puerta y responde a las siguientes preguntas:</p>
+      <p>¿Cual es la probabilidad estimada de ganar el automovil si el concursante decide cambiar la puerta que escogió inicialmente?</p>
+      <p><b>Respuesta:______________________________________________________________________________</b></p>
+      <p>Teniendo en cuenta la estimación obtenida en la simulación previa. Si tu fueras el concursante ¿Cambiarias o te quedarias con la puerta elegida inicialmente?</p>
+      <p><b>Respuesta:______________________________________________________________________________</b></p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe un programa en Python que solicite al usuario un número entero positivo  $N$ menor o igual que 
+        105  (validar entrada) y encuentre e imprima el número entero positivo más pequeño  $N$  tal que el 
+        producto de sus dígitos sea igual a  $N$ .</p>
+      <p>Por ejemplo, si   $N=10$ , entonces el programa debería imprimir  25  pues  25  es el número entero
+         positivo más pequeño tal que  $2\times 5=10$.</p>
+    </div>
+    
+    <div class="nota-box">
+      <h1 class="number-title-practica">Práctica</h1>
+      <p>Escribe una funcion en Python que reciba como parámetros el centro  $(h,k)$  de una circunferencia, 
+        el radio  $r>0$  y un punto $(x,y)$  y determine si el punto $(x,y)$  se encuentra en la circunferencía
+        con centro en  $(h,k)$  y radio  $r$ . La función debe devvolver <code>True</code> en caso afirmativo 
+        y <code>False</code> en caso contrario.</p>
+    </div>
   </body>
     
