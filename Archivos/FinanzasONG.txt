@@ -1,0 +1,19 @@
+10000  
+Donación 5000 Educación  
+Gasto 2000 Salud  
+Donación 3000 Alimentación  
+Gasto 1000 Educación  
+Gasto 500 Alimentación  
+Donación 4000 Salud  
+Gasto 1500 Educación  
+Donación 2500 Alimentación  
+Gasto 800 Salud  
+Gasto 1200 Alimentación  
+Donación 3500 Educación  
+Gasto 900 Salud  
+Donación 2000 Educación  
+Gasto 1800 Alimentación  
+Gasto 600 Salud  
+Donación 5000 Salud  
+Gasto 2200 Educación  
+Gasto 1000 Alimentación  
