@@ -79,31 +79,38 @@
       <body class="fondo-body" ><h1 class="page-title"> Notas</h1>  
 
         <div class="links-box"  style = "font-family: 'Oldenburg', cursive;">
-        <a href="./Semanas/Semana1.ipynb" download> Semana 1 </a>
-        <a href="./Semanas/Semana3.ipynb" download>Semana 3</a> 
-        <a href="./Semanas/Semana4.ipynb" download>Semana 4</a> 
-        <!-- <a href="./Semanas/S3.ipynb" target="_blank">Semana 5, 6 y 7</a> 
-        <a href="./Semanas/S4.ipynb" target="_blank">Módulo turtle</a> 
-        <a href="./Semanas/S5.ipynb" target="_blank">Semana 8</a> 
-        <a href="./Semanas/S6.ipynb" target="_blank">Semana 9</a> 
-        <a href="./Semanas/S7.ipynb" target="_blank">Funciones</a>  -->
+        <a href="./Semanas/Notas_Primer_Parcial.ipynb" download> Notas Primer Examen Parcial </a>
+        <a href="./Semanas/Notas_Segundo_Parcial.ipynb" download> Notas Segundo Examen Parcial</a> 
+      
 
-        <!-- <a href="https://github.com/pjhh-umar/ProgramacionUNO/blob/main/Semanas/S3.ipynb" target="_blank">Semana 3</a> 
-        <a href="https://github.com/pjhh-umar/ProgramacionUNO/blob/main/Semanas/S4.ipynb" target="_blank">Semana 4</a> 
-        <a href="https://github.com/pjhh-umar/ProgramacionUNO/blob/main/Semanas/S5.ipynb" target="_blank">Semana 5</a> 
-        <a href="https://github.com/pjhh-umar/ProgramacionUNO/blob/main/Semanas/S6.ipynb" target="_blank" >Semana 6</a> 
-        <a href="https://github.com/pjhh-umar/ProgramacionUNO/blob/main/Semanas/S7.ipynb" target="_blank" >Semana 7</a> 
-        <a href="https://github.com/pjhh-umar/ProgramacionUNO/blob/main/Semanas/S8.ipynb" target="_blank">Semana 8</a> 
-        <a href="https://drive.google.com/file/d/1CXtW7UXeX9E6X4zw8TPSrD9l8wTWGzPV/view?usp=sharing" target="_blank">Semana 9</a> 
-        <a href="https://pjhh-umar.github.io/ProgramacionUNO/Semanas/S9.html">Semana 9</a> 
-        <a href="https://pjhh-umar.github.io/ProgramacionUNO/Semanas/S10.html">Semana 10</a> 
-        <a href="https://pjhh-umar.github.io/ProgramacionUNO/Semanas/S11.html">Semana 11</a> 
-        <a href="https://pjhh-umar.github.io/ProgramacionUNO/Semanas/S12.html">Semana 12</a> 
-        <a href="https://pjhh-umar.github.io/ProgramacionUNO/Semanas/S13.html">Semana 13</a> 
-        <a href="https://pjhh-umar.github.io/ProgramacionUNO/Semanas/S14.html">Semana 14</a>  -->
     </div>
 
   </body>
+
+    <!-- Donde aparecerá la fecha de la última modificación -->
+  <footer>
+    <center>
+     <p id="ultima-actualizacion"></p>
+    </center>
+</footer>
+<script>
+  // Obtenemos la fecha y hora de la última modificación del documento
+  const fechaModificacion = new Date(document.lastModified);
+  
+  // Opciones para formatear la fecha (por ejemplo, DD/MM/AAAA)
+  const opcionesFecha = { day: '2-digit', month: '2-digit', year: 'numeric' };
+  const fechaFormateada = fechaModificacion.toLocaleDateString('es-ES', opcionesFecha);
+
+  // Obtenemos la hora (HH:MM:SS)
+  const horaFormateada = fechaModificacion.toLocaleTimeString('es-ES', {
+      hour: '2-digit', minute: '2-digit'
+  });
+
+  // Insertamos la fecha y la hora en el elemento con el ID "ultima-modificacion"
+  document.getElementById("ultima-actualizacion").textContent = `Última actualización: ${fechaFormateada}`;
+</script>
+
+
 
 
 </html>
