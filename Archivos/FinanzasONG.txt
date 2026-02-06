@@ -1,19 +1,21 @@
-10000  
-Donación 5000 Educación  
-Gasto 2000 Salud  
-Donación 3000 Alimentación  
-Gasto 1000 Educación  
-Gasto 500 Alimentación  
-Donación 4000 Salud  
-Gasto 1500 Educación  
-Donación 2500 Alimentación  
-Gasto 800 Salud  
-Gasto 1200 Alimentación  
-Donación 3500 Educación  
-Gasto 900 Salud  
-Donación 2000 Educación  
-Gasto 1800 Alimentación  
-Gasto 600 Salud  
-Donación 5000 Salud  
-Gasto 2200 Educación  
-Gasto 1000 Alimentación  
+10000
+2025-01-03 Donación 5000 Educación
+2025-01-05 Gasto 2000 Salud
+2025-01-08 Donación 3000 Alimentación
+2025-01-10 Gasto 1000 Educación
+2025-01-12 Gasto 500 Alimentación
+2025-01-15 Donación 4000 Salud
+2025-01-18 Gasto 1500 Educación
+2025-01-20 Donación 2500 Alimentación
+2025-01-22 Gasto 800 Salud
+2025-01-25 Gasto 1200 Alimentación
+2025-01-28 Donación 3500 Educación
+2025-01-30 Gasto 900 Salud
+2025-02-02 Donación 2000 Educación
+2025-02-05 Gasto 1800 Alimentación
+2025-02-08 Gasto 600 Salud
+2025-02-12 Donación 5000 Salud
+2025-02-15 Gasto 2200 Educación
+2025-02-18 Gasto 1000 Alimentación
+2025-02-22 Donación 3000 Infraestructura
+2025-02-25 Gasto 2500 Infraestructura
