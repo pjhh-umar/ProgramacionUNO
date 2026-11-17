@@ -1,0 +1,7 @@
+Frecuencias de palabras — ejercicio didáctico
+Palabra          Cantidad
+riesgo                  2
+matemáticas             2
+seguro                  2
+actuario                1
+actuaría                2
