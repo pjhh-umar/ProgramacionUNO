@@ -1,0 +1,6 @@
+folio|ramo|monto
+S001|Auto|1200.00
+S002|Vida|1000.00
+S003|Auto|0.00
+S004|Vida|2000.00
+S005|Auto|800.00

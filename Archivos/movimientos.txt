@@ -1,0 +1,6 @@
+Saldo inicial|1500.00
+Deposito|500.00
+Retiro|125.50
+
+Deposito|300.00
+Retiro|50.00

@@ -1,0 +1,4 @@
+Una pregunta clara ayuda a construir un buen modelo.
+Los datos requieren contexto antes de ser interpretados.
+Programar también consiste en comprobar y explicar.
+En Actuaría aprendemos a razonar sobre la incertidumbre.

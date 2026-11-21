@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Prácticas revisadas del segundo parcial de Programación I. Licenciatura en Actuaría, Universidad del Mar, campus Huatulco.">
+  <title>Prácticas del segundo parcial | Programación I</title>
+  <!-- Respaldo mínimo: la hoja del sitio conserva la prioridad visual. -->
+  <style>
+html {font-size:16px} body {margin:8px;font-family:Georgia,serif;line-height:1.5}
+body.fondo-body {background:rgb(252,252,244);color:#000;counter-reset:temaCounter 2 sectionCounter 0}
+.main-header {display:flex;align-items:center;justify-content:space-evenly;text-align:center;width:100%}
+.logo_superior_umar {width:110px;flex:0 0 110px}.logo_superior_umar img {width:80%;height:auto;max-width:110px}
+.contenedor_titulo {width:100%;display:flex;flex-direction:column;align-items:center;gap:.3em}
+.title {font-size:180%;font-weight:800;color:rgb(173,113,43)}
+.subtitle {font-size:150%;color:rgb(3,66,139)}.subsubtitle {font-size:130%;color:rgb(0,124,191)}
+.top-nav {text-align:center;padding:1%}.top-nav ul {padding:12px;border-radius:25px;background:rgb(228,255,255);list-style:none}
+.top-nav li {display:inline-block;padding:.4em 1.1em}.top-nav a {text-decoration:none;color:midnightblue;font-weight:700}
+h1.page-title-practica {font-size:140%;text-align:center;color:darkgoldenrod}
+.nota-box,.info-box {border-radius:20px;padding:20px;box-sizing:border-box;margin:50px auto;width:90%;text-align:justify}
+.nota-box {box-shadow:0 0 10px rgb(0,166,255)}.info-box {box-shadow:0 0 10px goldenrod}
+h1.number-title-practica {font-size:160%;text-align:center;color:rgb(0,78,148);margin:0;padding:.25%}
+h1.number-title-practica::after {counter-increment:sectionCounter;content:" " counter(temaCounter) "." counter(sectionCounter) "."}
+</style>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body.fondo-body {counter-reset:temaCounter 2 sectionCounter 0}
+    h1.page-title-practica {counter-reset:semanaCounter 2 subsectionCounter 0}
+    .titulo-ejercicio {text-align:center;font-size:1.15em;font-weight:600;margin:.6em 0 1em}
+    .nota-box pre {white-space:pre-wrap;overflow-wrap:anywhere;background:#f2f7fa;border-radius:8px;padding:12px;text-align:left;font-size:.92em;line-height:1.5}
+    .nota-box code,.info-box code {overflow-wrap:anywhere}
+    .nota-box li,.info-box li {margin-bottom:.45em}
+    .nota-box:target {outline:2px solid #005991;outline-offset:5px}
+    footer {text-align:center;margin:3em 0;color:#555}
+    @media(max-width:600px){.logo_superior_umar{width:65px;flex-basis:65px}.title{font-size:140%}.subtitle{font-size:110%}.subsubtitle{font-size:100%}.nota-box,.info-box{width:96%;padding:16px;text-align:left}.top-nav li{padding:.3em .5em}}
+    @media print {.top-nav,.volver-arriba{display:none}.nota-box,.info-box{box-shadow:none;border:1px solid #aaa;width:100%;margin:1.2em 0}.nota-box pre{background:none}body.fondo-body{background:white}}
+  </style>
+  <script>
+    window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "tags": "ams"}};
+  </script>
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="../main.js"></script>
+  <script defer id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="fondo-body" id="inicio">
+<header class="main-header">
+  <div class="logo_superior_umar"><a href="https://www.umar.mx" target="_blank" rel="noopener noreferrer"><img src="../Imagenes/umar_logo_hd.webp" alt="Universidad del Mar"></a></div>
+  <div class="contenedor_titulo">
+    <div class="title">Programación I</div>
+    <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+    <div class="subsubtitle">Licenciatura en Actuaría</div>
+  </div>
+  <div class="logo_superior_umar"><a href="https://www.umar.mx" target="_blank" rel="noopener noreferrer"><img src="../Imagenes/umar_logo_hd.webp" alt="Universidad del Mar"></a></div>
+</header>
+<nav class="top-nav" aria-label="Navegación del curso">
+  <ul>
+    <li><a href="../Home.html">Inicio</a></li>
+    <li><a href="../Informacion_General.html">Información</a></li>
+    <li><a href="../Notas.html">Notas</a></li>
+    <li><a href="../Practicas.html">Prácticas</a></li>
+    <li><a href="../Enlaces_externos.html">Links</a></li>
+  </ul>
+</nav>
+<main>
+<h1 class="page-title-practica">Prácticas 2</h1>
+<div class="info-box" id="indicaciones">
+  <p>Resuelve las prácticas utilizando los recursos presentados en clase. Este material es un banco de actividades para el segundo parcial; el docente indicará cuáles deben entregarse.</p>
+  <ol>
+    <li>Identifica en tu notebook cada práctica y describe sus entradas, reglas y salidas. Incluye al menos dos pruebas con el resultado esperado y el obtenido.</li>
+    <li>Utiliza Python 3 y su biblioteca estándar. No se requieren NumPy, pandas ni programación orientada a objetos. Cuando se solicite un ciclo, úsalo en la primera versión.</li>
+    <li>Salvo indicación contraria, supone entradas convertibles al tipo requerido. Validar significa comprobar el dominio o las categorías: vuelve a solicitar los datos fuera del dominio. No se requiere manejar texto no numérico mediante excepciones.</li>
+    <li>Muestra importes con dos decimales sin redondear cálculos intermedios. En tablas, utiliza anchos de campo con <code>.format()</code> o f-strings.</li>
+    <li>Conserva los datos de entrada salvo indicación expresa. No utilices <code>eval()</code>. Para resultados aproximados, explica una tolerancia adecuada.</li>
+    <li>Los nombres, matrículas, movimientos, coberturas y tarifas son ficticios. No utilices información personal o financiera real. No representan políticas institucionales ni recomendaciones profesionales.</li>
+    <li>Los ejercicios de series y el último de simulación son retos opcionales. Estudia funciones, archivos y <code>random</code> antes de las prácticas que los requieren.</li>
+  </ol>
+  <p>Para los ejercicios de archivos, descarga los siguientes datos y colócalos junto a tu programa o notebook. En Colab también debes cargarlos.</p>
+  <ul>
+    <li><a href="Archivos/Segundo_Parcial/frases_base.txt" download>frases_base.txt</a></li>
+    <li><a href="Archivos/Segundo_Parcial/movimientos.txt" download>movimientos.txt</a></li>
+    <li><a href="Archivos/Segundo_Parcial/siniestros.txt" download>siniestros.txt</a></li>
+    <li><a href="Archivos/Segundo_Parcial/texto_actuaria.txt" download>texto_actuaria.txt</a></li>
+  </ul>
+</div>
+<!-- Identificador de trabajo: A01 -->
+<div class="nota-box" id="practica-2-1">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Comparación con un valor de referencia</p>
+  <p>Escribe un programa en Python que solicite un número real y determine si es menor, igual o mayor que 10. Utiliza una estructura if–elif–else y presenta un mensaje que incluya el número ingresado.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Entrada: 10. Salida: Igual a 10.</pre>
+  <pre>Entrada: 9.5. Salida: Menor que 10.</pre>
+</div>
+
+<!-- Identificador de trabajo: A02 -->
+<div class="nota-box" id="practica-2-2">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Mayor y menor de tres valores</p>
+  <p>Solicita tres números reales y determina el mayor y el menor. En la primera versión no utilices min(), max() ni sorted(). Contempla los empates e informa si los tres valores son iguales.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Entradas: 3, 3, 1. Mayor: 3. Menor: 1.</pre>
+  <pre>Entradas: 2, 2, 2. Los tres valores son iguales.</pre>
+</div>
+
+<!-- Identificador de trabajo: A03 -->
+<div class="nota-box" id="practica-2-3">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Años bisiestos</p>
+  <p>Solicita un año entero entre 1 y 9999 y valida el intervalo. Determina si es bisiesto mediante la regla gregoriana: es divisible entre 400, o es divisible entre 4 y no entre 100. Imprime el año y el resultado.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>1900 no es bisiesto.</pre>
+  <pre>2000 y 2024 son bisiestos.</pre>
+  <p><b>Observación:</b> Para este ejercicio se aplica la regla gregoriana a todos los años del intervalo, sin estudiar los cambios históricos de calendario.</p>
+</div>
+
+<!-- Identificador de trabajo: A04 -->
+<div class="nota-box" id="practica-2-4">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">El día de la semana del primero de enero</p>
+  <p>Solicita un año entero a entre 1 y 9999. Calcula el valor d mediante la expresión indicada y muestra el nombre completo del día de la semana. Usa una lista con la correspondencia 0 = domingo, 1 = lunes, …, 6 = sábado. No uses datetime para resolver; puedes emplearlo después para verificar.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>2026: jueves.</pre>
+  <pre>2000: sábado.</pre>
+  <p><b>Observación:</b> Fórmula en Python: d = (a + (a-1)//4 - (a-1)//100 + (a-1)//400) % 7. Se supone calendario gregoriano proléptico.</p>
+</div>
+
+<!-- Identificador de trabajo: A05 -->
+<div class="nota-box" id="practica-2-5">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Conversión por tramos: un modelo de edad canina</p>
+  <p>Pregunta si el usuario tiene un perro: 1 para Sí y 2 para No. Valida la opción. Si responde 1, solicita una edad h real no negativa y calcula 10.5*h para h ≤ 2; para h &gt; 2 calcula 21 + 4*(h-2). Si responde 2, muestra un mensaje respetuoso sin solicitar edad.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>h = 1.5: resultado 15.75.</pre>
+  <pre>h = 3: resultado 25.00.</pre>
+  <p><b>Observación:</b> Esta conversión es exclusivamente un modelo didáctico, no una equivalencia veterinaria.</p>
+</div>
+
+<!-- Identificador de trabajo: A06 -->
+<div class="nota-box" id="practica-2-6">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Descuentos en una librería universitaria ficticia</p>
+  <p>Una librería ficticia aplica una sola tasa de descuento sobre el importe completo de una compra no negativa: menos de $50, 0%; de $50 a menos de $100, 2.5%; de $100 a menos de $500, 5%; desde $500, 10%. Escribe un programa que solicite el importe y muestre subtotal, tasa, descuento y total con dos decimales.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Compra de $50.00: descuento $1.25; total $48.75.</pre>
+  <pre>Compra de $500.00: descuento $50.00; total $450.00.</pre>
+  <p><b>Observación:</b> Las tasas son datos del ejercicio, no una política de la Universidad del Mar.</p>
+</div>
+
+<!-- Identificador de trabajo: A07 -->
+<div class="nota-box" id="practica-2-7">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Validación de unidades en una fórmula</p>
+  <p>Como repaso de fórmulas, solicita nombre, estatura h en metros y masa w en kilogramos. Verifica que h y w sean positivas. Calcula el índice w/h² y presenta el resultado con dos decimales. No asignes categorías clínicas ni emitas recomendaciones de salud.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>h = 2 y w = 80: resultado 20.00.</pre>
+  <pre>h = 0: dato no válido; no debe realizarse la división.</pre>
+  <p><b>Observación:</b> El objetivo es programar una fórmula, verificar sus unidades y evitar divisiones entre cero.</p>
+</div>
+
+<!-- Identificador de trabajo: B01 -->
+<div class="nota-box" id="practica-2-8">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Suma de dígitos</p>
+  <p>Solicita un entero no negativo y utiliza un ciclo for para sumar sus dígitos. Puedes recorrer su representación decimal y convertir cada carácter a entero. No utilices sum() en la primera versión. Presenta la expresión de la suma y el resultado.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>12345 → 1 + 2 + 3 + 4 + 5 = 15.</pre>
+  <pre>0 → 0 = 0.</pre>
+</div>
+
+<!-- Identificador de trabajo: B02 -->
+<div class="nota-box" id="practica-2-9">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Inversión de dígitos</p>
+  <p>Solicita un entero no negativo e imprime el entero que se obtiene al invertir sus dígitos. Utiliza un ciclo; no emplees [::-1] ni reversed(). El resultado es numérico, por lo que los ceros iniciales de la inversión no se conservan.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>1200 → 21.</pre>
+  <pre>0 → 0.</pre>
+</div>
+
+<!-- Identificador de trabajo: B03 -->
+<div class="nota-box" id="practica-2-10">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Números capicúa</p>
+  <p>Solicita un entero no negativo y determina con un ciclo for si es capicúa: se lee igual de izquierda a derecha que de derecha a izquierda. Compara posiciones simétricas sin invertir la cadena mediante rebanadas. Interrumpe la búsqueda al encontrar una diferencia.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>12321 es capicúa.</pre>
+  <pre>12320 no es capicúa; 0 sí lo es.</pre>
+</div>
+
+<!-- Identificador de trabajo: B04 -->
+<div class="nota-box" id="practica-2-11">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Notación desarrollada</p>
+  <p>Solicita un entero no negativo e imprime su notación desarrollada en base 10. Incluye los términos cuyos dígitos sean cero. Utiliza un ciclo y evita colocar un signo + al final de la expresión.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>897 = 8 x 10^2 + 9 x 10^1 + 7 x 10^0</pre>
+  <pre>105 = 1 x 10^2 + 0 x 10^1 + 5 x 10^0</pre>
+</div>
+
+<!-- Identificador de trabajo: B05 -->
+<div class="nota-box" id="practica-2-12">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Números de dos cifras con suma impar</p>
+  <p>Recorre todos los enteros de 10 a 99 y muestra aquellos cuya suma de dígitos sea impar. Imprime también cuántos encontraste. Obtén los dígitos mediante división entera y módulo.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>10 se incluye; 11 no se incluye.</pre>
+  <pre>Deben encontrarse 45 números.</pre>
+</div>
+
+<!-- Identificador de trabajo: B06 -->
+<div class="nota-box" id="practica-2-13">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Cuatro dígitos equilibrados</p>
+  <p>Busca todos los números de 1000 a 9999 cuyos dígitos d1, d2, d3, d4, numerados desde la izquierda, cumplan d1 + d3 = d2 + d4. Imprime los resultados y su cantidad. Explica por qué no se consideran ceros iniciales como una cuarta cifra.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>1001 se incluye porque 1 + 0 = 0 + 1.</pre>
+  <pre>1234 no se incluye porque 1 + 3 ≠ 2 + 4.</pre>
+</div>
+
+<!-- Identificador de trabajo: B07 -->
+<div class="nota-box" id="practica-2-14">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">¿Es un número perfecto?</p>
+  <p>Un entero positivo n es perfecto si la suma de sus divisores positivos menores que él es igual a n. Solicita n y determina si es perfecto. En la primera versión prueba divisores hasta n//2 y utiliza un acumulador.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>6 es perfecto: 1 + 2 + 3 = 6.</pre>
+  <pre>1 no es perfecto; 28 sí lo es.</pre>
+  <p><b>Observación:</b> Como ampliación, busca divisores por parejas hasta la raíz cuadrada y evita sumar dos veces una raíz exacta.</p>
+</div>
+
+<!-- Identificador de trabajo: B08 -->
+<div class="nota-box" id="practica-2-15">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Búsqueda acotada de números perfectos</p>
+  <p>Encuentra todos los números perfectos menores o iguales que 10000. Reutiliza el criterio anterior; si ya estudiaste funciones, encapsúlalo. Compara el número de divisores que debes probar con una búsqueda hasta la raíz cuadrada.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Hasta 30: [6, 28].</pre>
+  <pre>Hasta 10000: [6, 28, 496, 8128].</pre>
+  <p><b>Observación:</b> Reto opcional. No se solicita buscar cinco perfectos por fuerza bruta sin límite. Explica por qué aumentar mucho el intervalo exige revisar el costo del algoritmo.</p>
+</div>
+
+<!-- Identificador de trabajo: B09 -->
+<div class="nota-box" id="practica-2-16">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Números primos hasta un límite</p>
+  <p>Solicita n entero entre 1 y 10000 y genera la lista de números primos menores o iguales que n. Un primo es mayor que 1 y tiene exactamente dos divisores positivos. Para cada candidato prueba divisores hasta su raíz; usa break cuando encuentres uno.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>n = 10 → [2, 3, 5, 7].</pre>
+  <pre>n = 1 → [].</pre>
+</div>
+
+<!-- Identificador de trabajo: B10 -->
+<div class="nota-box" id="practica-2-17">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Figura numérica simétrica</p>
+  <p>Solicita n entero entre 1 y 20 e imprime filas crecientes desde 1 hasta 1 2 … n, seguidas de filas decrecientes hasta 1. La fila de longitud n debe aparecer una sola vez. Utiliza ciclos y separa los valores con espacios.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Para n = 3:
+1
+1 2
+1 2 3
+1 2
+1</pre>
+  <pre>Para n = 1 se imprime únicamente una fila con el número 1.</pre>
+</div>
+
+<!-- Identificador de trabajo: B11 -->
+<div class="nota-box" id="practica-2-18">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Tabla pitagórica</p>
+  <p>Genera una tabla con los productos de todas las parejas de enteros de 1 a 10. Incluye encabezados de columnas y de filas. Utiliza ciclos anidados y anchos de campo mediante .format() o f-strings.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Fila 3, columna 4: 12.</pre>
+  <pre>Fila 10, columna 10: 100.</pre>
+</div>
+
+<!-- Identificador de trabajo: B12 -->
+<div class="nota-box" id="practica-2-19">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Una suma que excede el límite</p>
+  <p>Solicita un entero positivo k. Con un ciclo while encuentra el menor n positivo para el cual 1 + 2 + … + n sea estrictamente mayor que k. Imprime n y la suma obtenida. Alcanzar exactamente k no es suficiente.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>k = 6 → n = 4; suma = 10.</pre>
+  <pre>k = 1 → n = 2; suma = 3.</pre>
+</div>
+
+<!-- Identificador de trabajo: B13 -->
+<div class="nota-box" id="practica-2-20">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Sucesión de Collatz con límite de iteraciones</p>
+  <p>Solicita un entero positivo n. Si es par, reemplázalo por n//2; si es impar, por 3*n+1. Guarda los términos hasta llegar a 1 o realizar 1000 transformaciones. Informa la sucesión, la cantidad de transformaciones y la causa de terminación.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>n = 1 → [1]; cero transformaciones.</pre>
+  <pre>n = 6 → [6, 3, 10, 5, 16, 8, 4, 2, 1]; ocho transformaciones.</pre>
+  <p><b>Observación:</b> La afirmación de que todo entero positivo termina llegando a 1 es una conjetura sin demostración general conocida. Agotar el límite no demuestra que sea falsa; probar casos tampoco la demuestra.</p>
+</div>
+
+<!-- Identificador de trabajo: C01 -->
+<div class="nota-box" id="practica-2-21">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Barras de frecuencias en texto</p>
+  <p>Dada una lista de enteros no negativos, imprime una línea por elemento con posición desde 1, una barra con un símbolo # por unidad y el valor numérico. Prueba primero con [19, 20, 15, 7, 11]. La lista vacía debe producir un mensaje explícito.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Para [3, 0, 2]:
+1 | ### 3
+2 |     0
+3 | ##  2</pre>
+  <pre>Para []: Sin datos.</pre>
+</div>
+
+<!-- Identificador de trabajo: C02 -->
+<div class="nota-box" id="practica-2-22">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Caracteres distintos conservando el orden</p>
+  <p>Recibe una cadena y construye una lista en la que cada carácter aparezca una sola vez, según su primera aparición. Distingue mayúsculas de minúsculas e incluye los espacios. No conviertas directamente a set si necesitas conservar ese orden.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>&quot;Acta&quot; → [&quot;A&quot;, &quot;c&quot;, &quot;t&quot;, &quot;a&quot;].</pre>
+  <pre>&quot;a a&quot; → [&quot;a&quot;, &quot; &quot;]; &quot;&quot; → [].</pre>
+</div>
+
+<!-- Identificador de trabajo: C03 -->
+<div class="nota-box" id="practica-2-23">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Frecuencia de palabras</p>
+  <p>Lee una línea de texto. Normaliza con casefold(), reemplaza los signos ,.;:!?¡¿ por espacios y divide por blancos. Conserva los acentos. Construye un diccionario de frecuencias y muestra el número total de palabras y el de palabras distintas.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>&quot;Riesgo, riesgo y seguro.&quot; → riesgo: 2, y: 1, seguro: 1; total: 4; distintas: 3.</pre>
+  <pre>Una cadena formada solo por espacios tiene cero palabras.</pre>
+  <p><b>Observación:</b> Esta normalización es una regla sencilla del ejercicio, no un analizador lingüístico general. No agrupa singular y plural.</p>
+</div>
+
+<!-- Identificador de trabajo: C04 -->
+<div class="nota-box" id="practica-2-24">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Buscar una palabra completa</p>
+  <p>Lee una línea de texto y solicita una sola palabra alfabética. Usa la normalización de la práctica anterior y cuenta coincidencias de palabras completas. Normaliza también la consulta. No sustituyas este procedimiento por texto.count(busqueda), que cuenta subcadenas.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Texto: &quot;seguro seguros seguro&quot;; consulta: &quot;seguro&quot; → 2.</pre>
+  <pre>En el mismo texto, consulta: &quot;riesgo&quot; → 0.</pre>
+</div>
+
+<!-- Identificador de trabajo: C05 -->
+<div class="nota-box" id="practica-2-25">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Primer valor de longitud máxima</p>
+  <p>Dado un diccionario cuyos valores son cadenas, muestra el primer valor de longitud máxima según el orden de inserción. Resuelve los empates sin reemplazar el primero encontrado. Para un diccionario vacío informa Sin datos.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>{&quot;a&quot;: &quot;vida&quot;, &quot;b&quot;: &quot;auto&quot;, &quot;c&quot;: &quot;salud&quot;} → salud.</pre>
+  <pre>{&quot;a&quot;: &quot;vida&quot;, &quot;b&quot;: &quot;auto&quot;} → vida.</pre>
+</div>
+
+<!-- Identificador de trabajo: C06 -->
+<div class="nota-box" id="practica-2-26">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Cantidades almacenadas como texto</p>
+  <p>Recibe una lista de cadenas que representan enteros válidos; pueden incluir signo y espacios extremos. Construye una lista nueva de enteros y calcula su suma con un acumulador. Imprime la lista original, la transformada y el total.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[&quot;1&quot;, &quot;3&quot;, &quot;5&quot;] → [1, 3, 5]; suma: 9.</pre>
+  <pre>[&quot; -2 &quot;, &quot;0&quot;, &quot;7&quot;] → [-2, 0, 7]; suma: 5.</pre>
+  <p><b>Observación:</b> Para [] la lista resultante es [] y la suma es 0. No modifiques la entrada.</p>
+</div>
+
+<!-- Identificador de trabajo: C07 -->
+<div class="nota-box" id="practica-2-27">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Duplicados y sus frecuencias</p>
+  <p>Recibe una lista de cadenas y muestra una sola vez cada cadena repetida con su frecuencia, en orden de primera aparición. La comparación es exacta y la entrada no debe modificarse. Si no hay repeticiones, muestra Sin duplicados.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[&quot;A&quot;, &quot;B&quot;, &quot;A&quot;, &quot;A&quot;, &quot;B&quot;] → A: 3; B: 2.</pre>
+  <pre>[&quot;A&quot;, &quot;a&quot;] → Sin duplicados.</pre>
+</div>
+
+<!-- Identificador de trabajo: C08 -->
+<div class="nota-box" id="practica-2-28">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Asistencia de un grupo ficticio</p>
+  <p>Utiliza el diccionario registro que aparece a continuación. Las claves son matrículas ficticias y los valores normalizados son Si o No. Cuenta asistencias, ausencias y porcentaje de asistencia respecto del total. Para un diccionario vacío muestra Sin registros.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>registro = {&quot;2023260134&quot;: &quot;Si&quot;, &quot;2023260135&quot;: &quot;No&quot;,
+            &quot;2023260136&quot;: &quot;Si&quot;, &quot;2023260137&quot;: &quot;No&quot;,
+            &quot;2023260138&quot;: &quot;Si&quot;, &quot;2023260139&quot;: &quot;Si&quot;,
+            &quot;2023260140&quot;: &quot;Si&quot;, &quot;2023260141&quot;: &quot;No&quot;,
+            &quot;2023260142&quot;: &quot;No&quot;}</pre>
+  <pre>Resultado: 5 asistencias, 4 ausencias y 55.56% de asistencia.</pre>
+</div>
+
+<!-- Identificador de trabajo: C09 -->
+<div class="nota-box" id="practica-2-29">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Nombres en minúsculas y orden descendente</p>
+  <p>Dada una lista de nombres de una sola palabra alfabética, conserva únicamente los escritos completamente en minúsculas. Guárdalos en una tupla ordenada de forma descendente. No conviertas los nombres que originalmente tengan mayúsculas.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[&quot;Nayeli&quot;, &quot;victor&quot;, &quot;antonio&quot;, &quot;karime&quot;, &quot;daniel&quot;]
+→ (&quot;victor&quot;, &quot;karime&quot;, &quot;daniel&quot;, &quot;antonio&quot;).</pre>
+  <pre>[&quot;Ana&quot;, &quot;LUIS&quot;] → ().</pre>
+  <p><b>Observación:</b> Se utiliza el orden de cadenas de Python, no una ordenación lingüística adaptada al español.</p>
+</div>
+
+<!-- Identificador de trabajo: C10 -->
+<div class="nota-box" id="practica-2-30">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Índice de la primera cadena más larga</p>
+  <p>Dada una lista de cadenas, determina el índice desde 0 de la primera de longitud máxima. Si la lista está vacía, utiliza None y muestra un mensaje. No confundas índice con posición ordinal desde 1.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[&quot;Odio&quot;, &quot;Remordimiento&quot;, &quot;Venganza&quot;] → índice 1.</pre>
+  <pre>[&quot;Amor&quot;, &quot;Odio&quot;] → índice 0.</pre>
+</div>
+
+<!-- Identificador de trabajo: C11 -->
+<div class="nota-box" id="practica-2-31">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Depuración de categorías administrativas</p>
+  <p>Una lista ficticia contiene las etiquetas Hombre y Mujer, a veces con espacios extremos o diferencias de mayúsculas. Normaliza y construye un diccionario con Hombres, Mujeres y No especificado. Incluye en No especificado cualquier etiqueta distinta; no infieras información a partir de nombres.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[&quot;Hombre&quot;, &quot;Mujer&quot;, &quot;mujer&quot;, &quot;hombre&quot;, &quot;hombre&quot;, &quot;hombre&quot;,
+ &quot;mujer&quot;, &quot;hombre&quot;, &quot;Mujer&quot;, &quot;Hombre&quot;, &quot;Mujer&quot;, &quot;Hombre&quot;, &quot;mujer&quot;]
+→ {&quot;Hombres&quot;: 7, &quot;Mujeres&quot;: 6, &quot;No especificado&quot;: 0}.</pre>
+  <pre>[&quot; mujer &quot;, &quot;&quot;, &quot;Sin dato&quot;]
+→ {&quot;Hombres&quot;: 0, &quot;Mujeres&quot;: 1, &quot;No especificado&quot;: 2}.</pre>
+  <p><b>Observación:</b> El ejercicio trabaja una variable administrativa suministrada; no pretende representar todas las categorías posibles de identidad ni definir un formulario institucional.</p>
+</div>
+
+<!-- Identificador de trabajo: C12 -->
+<div class="nota-box" id="practica-2-32">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Nombres que comienzan con S</p>
+  <p>Dada la lista nombres del ejemplo, construye un diccionario con los nombres que comienzan con S y su frecuencia. En esta versión la comparación es exacta: no normalices las mayúsculas.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>nombres = [&quot;Sofia&quot;, &quot;Saul&quot;, &quot;Jorge&quot;, &quot;Samantha&quot;, &quot;Jonathan&quot;,
+           &quot;Sofia&quot;, &quot;Juan&quot;, &quot;Joaquin&quot;, &quot;Diana&quot;, &quot;Daniela&quot;,
+           &quot;Sarah&quot;, &quot;Sofia&quot;, &quot;Samantha&quot;]</pre>
+  <pre>Resultado: {&quot;Sofia&quot;: 3, &quot;Saul&quot;: 1, &quot;Samantha&quot;: 2, &quot;Sarah&quot;: 1}.</pre>
+</div>
+
+<!-- Identificador de trabajo: C13 -->
+<div class="nota-box" id="practica-2-33">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Extremos de paridades diferentes</p>
+  <p>Dada una lista de enteros, calcula el mayor número par menos el menor número impar. Los valores pueden ser negativos. Si falta cualquiera de los dos grupos, informa que el resultado no está definido; no apliques min() o max() a una lista vacía.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[1, 2, 4, 6] → 6 - 1 = 5.</pre>
+  <pre>[-5, -2, 0] → 0 - (-5) = 5; [2, 4] → no definido.</pre>
+</div>
+
+<!-- Identificador de trabajo: C14 -->
+<div class="nota-box" id="practica-2-34">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Mayor dígito impar</p>
+  <p>Solicita una cadena no vacía compuesta exclusivamente por caracteres ASCII de 0 a 9. Determina el mayor dígito impar. Conserva la entrada como texto para admitir ceros iniciales. Si no existe ninguno, muestra un mensaje explícito.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>&quot;0023569&quot; → 9.</pre>
+  <pre>&quot;02468&quot; → Sin dígitos impares.</pre>
+</div>
+
+<!-- Identificador de trabajo: C15 -->
+<div class="nota-box" id="practica-2-35">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Mover ceros sin alterar los demás registros</p>
+  <p>Recibe una lista de enteros. Si contiene ceros, genera otra lista con los no ceros en su orden original y todos los ceros al final. Si no contiene ceros, devuelve una copia ordenada ascendentemente. No modifiques la entrada en ninguna rama.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[1, 4, 6, 0, 7, 0, 9] → [1, 4, 6, 7, 9, 0, 0].</pre>
+  <pre>[2, 1, 4, 7, 6] → [1, 2, 4, 6, 7]; [] → [].</pre>
+</div>
+
+<!-- Identificador de trabajo: D01 -->
+<div class="nota-box" id="practica-2-36">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Examen, proyecto y cumplimiento</p>
+  <p>En un grupo ficticio se registran estudiantes que presentaron examen y que entregaron proyecto. Utiliza los conjuntos del ejemplo y muestra los nombres ordenados y sus cantidades.</p>
+  <ol>
+    <li>Presentaron examen y entregaron proyecto: ambos requisitos.</li>
+    <li>Solo presentaron examen y solo entregaron proyecto.</li>
+    <li>Cumplieron al menos un requisito y exactamente uno.</li>
+    <li>No cumplieron ninguno, considerando el conjunto grupo.</li>
+  </ol>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>examen = {&quot;Ana&quot;, &quot;Luis&quot;, &quot;María&quot;, &quot;José&quot;}
+proyecto = {&quot;Ana&quot;, &quot;José&quot;, &quot;Mateo&quot;}
+grupo = {&quot;Ana&quot;, &quot;Luis&quot;, &quot;María&quot;, &quot;José&quot;, &quot;Mateo&quot;, &quot;Sofía&quot;}</pre>
+  <pre>Ambos: Ana y José. Exactamente uno: Luis, María y Mateo. Ninguno: Sofía.</pre>
+</div>
+
+<!-- Identificador de trabajo: D02 -->
+<div class="nota-box" id="practica-2-37">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Tutorías: agrupar pares en un diccionario</p>
+  <p>Una lista de tuplas relaciona cada tutor con un tutorado. Crea un diccionario cuyas claves sean tutores y cuyos valores sean listas de tutorados. Conserva el orden de los pares. En esta primera versión, una pareja repetida también se conserva.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>pares = [(&quot;Tutor1&quot;, &quot;Jorge&quot;), (&quot;Tutor2&quot;, &quot;Benito&quot;),
+         (&quot;Tutor1&quot;, &quot;Mateo&quot;), (&quot;Tutor3&quot;, &quot;Maura&quot;),
+         (&quot;Tutor1&quot;, &quot;Jesus&quot;), (&quot;Tutor4&quot;, &quot;Ximena&quot;)]</pre>
+  <pre>Tutor1 debe tener [&quot;Jorge&quot;, &quot;Mateo&quot;, &quot;Jesus&quot;]. Para [] se obtiene {}.</pre>
+  <p><b>Observación:</b> Como ampliación, crea una segunda versión que elimine parejas duplicadas sin cambiar el orden.</p>
+</div>
+
+<!-- Identificador de trabajo: D03 -->
+<div class="nota-box" id="practica-2-38">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Cruce de coberturas ficticias</p>
+  <p>Los conjuntos vida y accidentes contienen identificadores ficticios de contratos con cada cobertura. El conjunto cartera contiene todos los contratos. Determina los que tienen ambas coberturas, exactamente una y ninguna. Presenta identificadores ordenados y cantidades.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>vida = {&quot;P001&quot;, &quot;P002&quot;, &quot;P003&quot;}
+accidentes = {&quot;P002&quot;, &quot;P003&quot;, &quot;P004&quot;}
+cartera = {&quot;P001&quot;, &quot;P002&quot;, &quot;P003&quot;, &quot;P004&quot;, &quot;P005&quot;}</pre>
+  <pre>Ambas: P002 y P003. Exactamente una: P001 y P004. Ninguna: P005.</pre>
+  <p><b>Observación:</b> Los conjuntos son datos didácticos, no recomendaciones de contratación.</p>
+</div>
+
+<!-- Identificador de trabajo: D04 -->
+<div class="nota-box" id="practica-2-39">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Listas que deben corresponder</p>
+  <p>Escribe una función que reciba una lista de matrículas únicas y otra de promedios. Comprueba que tengan la misma longitud antes de crear un diccionario con zip(). Si no coinciden, devuelve None y muestra un mensaje desde el programa principal. No completes datos inventados.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[&quot;A1&quot;, &quot;A2&quot;], [8, 9] → {&quot;A1&quot;: 8, &quot;A2&quot;: 9}.</pre>
+  <pre>[&quot;A1&quot;, &quot;A2&quot;], [8] → None; no se crea un registro incompleto.</pre>
+</div>
+
+<!-- Identificador de trabajo: D05 -->
+<div class="nota-box" id="practica-2-40">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Folios únicos y trazabilidad</p>
+  <p>Recibe una lista de folios no vacíos. Construye una lista de folios únicos en orden de primera aparición y un diccionario solo con las frecuencias mayores que uno. Muestra cantidad original y cantidad de folios distintos. No ordenes ni modifiques la entrada.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[&quot;S2&quot;, &quot;S1&quot;, &quot;S2&quot;, &quot;S3&quot;] → únicos: [&quot;S2&quot;, &quot;S1&quot;, &quot;S3&quot;]; duplicados: {&quot;S2&quot;: 2}.</pre>
+  <pre>[] → lista única []; diccionario {}.</pre>
+</div>
+
+<!-- Identificador de trabajo: E01 -->
+<div class="nota-box" id="practica-2-41">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Lectura de coordenadas y distancia</p>
+  <p>Solicita dos puntos como cadenas con formato (x,y). Se admiten espacios y componentes convertibles a float. Verifica los paréntesis exteriores y que haya dos componentes separados por coma. Convierte con float y calcula la distancia. No utilices eval(). En este ejercicio se permiten puntos coincidentes.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>(0,0) y (3,4) → distancia 5.0000.</pre>
+  <pre>(1,1) y (1,1) → distancia 0.0000.</pre>
+  <p><b>Observación:</b> Fórmula: d = sqrt((x2-x1)**2 + (y2-y1)**2).</p>
+</div>
+
+<!-- Identificador de trabajo: E02 -->
+<div class="nota-box" id="practica-2-42">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Pendiente y rectas verticales</p>
+  <p>Lee dos puntos de coordenadas enteras con el formato de la práctica anterior. Si coinciden, informa que no determinan una recta única. Si sus coordenadas x son iguales pero los puntos son diferentes, informa Recta vertical: pendiente no definida. En otro caso calcula (y2-y1)/(x2-x1).</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>(1,0) y (1,4) → recta vertical, pendiente no definida.</pre>
+  <pre>(0,1) y (2,5) → pendiente 2.</pre>
+  <p><b>Observación:</b> No presentes infinito como una pendiente real.</p>
+</div>
+
+<!-- Identificador de trabajo: E03 -->
+<div class="nota-box" id="practica-2-43">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Colinealidad sin comparar pendientes</p>
+  <p>Recibe tres puntos de coordenadas enteras. Primero verifica si hay puntos repetidos; para esta práctica informa ese caso aparte. Para tres puntos distintos, determina si son colineales usando el determinante indicado. No dividas pendientes: debes incluir rectas verticales.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>(0,0), (1,1), (2,2) → colineales.</pre>
+  <pre>(0,0), (1,0), (0,1) → no colineales.</pre>
+  <p><b>Observación:</b> Son colineales si (x2-x1)*(y3-y1) - (y2-y1)*(x3-x1) == 0.</p>
+</div>
+
+<!-- Identificador de trabajo: E04 -->
+<div class="nota-box" id="practica-2-44">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Perímetro y área de un triángulo</p>
+  <p>Recibe tres puntos de coordenadas enteras. Comprueba que sean distintos y no colineales. Calcula las distancias a, b y c entre ellos, el perímetro P=a+b+c y el área mediante Herón. Presenta cuatro decimales.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>(0,0), (3,0), (0,4) → perímetro 12 y área 6.</pre>
+  <pre>(0,0), (1,1), (2,2) → no forman un triángulo no degenerado.</pre>
+  <p><b>Observación:</b> Herón: s=P/2 y área=sqrt(s*(s-a)*(s-b)*(s-c)). La fórmula calcula área, no perímetro.</p>
+</div>
+
+<!-- Identificador de trabajo: E05 -->
+<div class="nota-box" id="practica-2-45">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Aproximación de π mediante Leibniz</p>
+  <p>Solicita N entero entre 1 y 10000. Calcula la suma de N términos de la serie de Leibniz con un acumulador y muestra la aproximación y el error absoluto respecto de math.pi.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>N = 1 → 4.</pre>
+  <pre>N = 2 → 2.6666666667.</pre>
+  <p><b>Observación:</b> Reto opcional. Fórmula: L_N = suma de (-1)**k * 4/(2*k+1), para k=0,…,N-1. N cuenta términos, no el último índice. La convergencia es lenta.</p>
+</div>
+
+<!-- Identificador de trabajo: E06 -->
+<div class="nota-box" id="practica-2-46">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Aproximación de π mediante Nilakantha</p>
+  <p>Solicita N entero entre 0 y 10000. Parte de 3 y agrega N correcciones alternantes de la fórmula indicada. Imprime aproximación y error absoluto frente a math.pi. Compara con Leibniz utilizando el mismo número total de términos: N+1.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>N = 0 → 3.</pre>
+  <pre>N = 2 → 3.1333333333.</pre>
+  <p><b>Observación:</b> Reto opcional. T_N = 3 + suma de (-1)**(k+1) * 4/((2*k)*(2*k+1)*(2*k+2)), para k=1,…,N. No omitas el signo alternante.</p>
+</div>
+
+<!-- Identificador de trabajo: E07 -->
+<div class="nota-box" id="practica-2-47">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Aproximación del seno</p>
+  <p>Solicita x real en radianes con -π ≤ x ≤ π y N entero entre 1 y 20. Calcula la suma de N términos indicada y muestra el error absoluto respecto de math.sin(x), que se utiliza solo para verificar.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>x = 0, N = 1 → 0.</pre>
+  <pre>x = 1, N = 2 → 0.8333333333.</pre>
+  <p><b>Observación:</b> Reto opcional. S_N = suma de (-1)**k * x**(2*k+1)/(2*k+1)!, para k=0,…,N-1. Se define m! como el producto de 1 a m y 0!=1; puedes utilizar math.factorial().</p>
+</div>
+
+<!-- Identificador de trabajo: F01 -->
+<div class="nota-box" id="practica-2-48">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Crear, leer y ampliar un archivo</p>
+  <p>Usa frases_base.txt, suministrado con esta página, o cuatro frases propias. Crea una copia llamada frases_trabajo.txt y realiza las actividades siguientes. Emplea with y codificación UTF-8.</p>
+  <ol>
+    <li>Lee todo el archivo con read().</li>
+    <li>Reabre y recórrelo con readline() y un ciclo while.</li>
+    <li>Reabre y almacena sus líneas mediante readlines(); muestra cuántas tiene.</li>
+    <li>Agrega dos líneas con modo a. Después vuelve a abrir con r y muestra el resultado.</li>
+  </ol>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>El archivo base contiene cuatro líneas.</pre>
+  <pre>Después de agregar dos líneas, la copia debe contener seis.</pre>
+  <p><b>Observación:</b> El modo a no permite leer por sí solo. Para repetir la práctica, reconstruye la copia a partir de la base y evita agregar líneas indefinidamente.</p>
+</div>
+
+<!-- Identificador de trabajo: F02 -->
+<div class="nota-box" id="practica-2-49">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Numerar líneas sin sobrescribir la entrada</p>
+  <p>Lee frases_base.txt y genera frases_numeradas.txt. Cada línea debe comenzar con su número desde 1, dos puntos y un espacio. Conserva una línea de salida por cada línea de entrada, incluidas las vacías si las agregas para probar. No dupliques los saltos de línea.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>La primera línea comienza con &quot;1: &quot;.</pre>
+  <pre>El archivo base suministrado produce cuatro líneas numeradas y no debe modificarse.</pre>
+</div>
+
+<!-- Identificador de trabajo: F03 -->
+<div class="nota-box" id="practica-2-50">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Reconstruir un saldo ficticio</p>
+  <p>Lee movimientos.txt. La primera línea contiene Saldo inicial|monto. Las siguientes usan Deposito|monto o Retiro|monto; omite líneas vacías. Los importes son no negativos y usan punto decimal.</p>
+  <ol>
+    <li>Calcula el saldo final.</li>
+    <li>Cuenta depósitos y retiros.</li>
+    <li>Si encuentras una operación desconocida, muestra un error y no informes un saldo como si el procesamiento hubiera terminado correctamente.</li>
+  </ol>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Archivo suministrado: saldo final $2124.50, dos depósitos y dos retiros.</pre>
+  <pre>Un archivo que solo contiene Saldo inicial|0.00 produce saldo cero y ningún movimiento.</pre>
+  <p><b>Observación:</b> No se modela una política de autorización de sobregiro. Los datos son ficticios.</p>
+</div>
+
+<!-- Identificador de trabajo: F04 -->
+<div class="nota-box" id="practica-2-51">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Reporte de siniestros por ramo</p>
+  <p>Lee siniestros.txt, con encabezado folio|ramo|monto y folios únicos. Construye un diccionario que acumule cantidad de registros y monto total por ramo. Escribe reporte_ramos.txt sin modificar la entrada.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Archivo suministrado: Auto, 3 registros y total $2000.00; Vida, 2 registros y total $3000.00.</pre>
+  <pre>El total de todos los ramos es $5000.00.</pre>
+  <p><b>Observación:</b> El formato del ejercicio no contiene comillas ni separadores dentro de los campos; puedes procesarlo con split(&quot;|&quot;). No se requieren pandas ni bibliotecas externas.</p>
+</div>
+
+<!-- Identificador de trabajo: F05 -->
+<div class="nota-box" id="practica-2-52">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Reporte de palabras en un texto actuarial</p>
+  <p>Lee texto_actuaria.txt y reutiliza la normalización de la práctica de frecuencias: casefold(), sustitución de ,.;:!?¡¿ por espacios y separación por blancos. Escribe reporte_palabras.txt con palabra, frecuencia y porcentaje respecto del total de palabras. Ordena alfabéticamente según Python.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>&quot;riesgo riesgo seguro&quot; → riesgo: 2 y 66.67%; seguro: 1 y 33.33%.</pre>
+  <pre>Archivo vacío → Sin palabras; no se divide entre cero.</pre>
+</div>
+
+<!-- Identificador de trabajo: G01 -->
+<div class="nota-box" id="practica-2-53">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Deducible y límite de pago</p>
+  <p>Un modelo ficticio considera una pérdida L, un deducible d y un límite de pago M, todos no negativos. El pago es la pérdida menos el deducible, sin ser negativo ni superar M. La parte a cargo de la persona es L menos el pago.</p>
+  <ol>
+    <li>Solicita los tres datos y calcula con if–elif–else.</li>
+    <li>Muestra el pago y la parte no cubierta con dos decimales.</li>
+    <li>Comprueba mediante pago = min(max(L-d, 0), M).</li>
+  </ol>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>L=1500, d=500, M=800 → pago $800.00; parte no cubierta $700.00.</pre>
+  <pre>L=300, d=500, M=800 → pago $0.00; parte no cubierta $300.00.</pre>
+  <p><b>Observación:</b> No se consideran impuestos, coaseguro ni otras condiciones contractuales. No es un contrato real.</p>
+</div>
+
+<!-- Identificador de trabajo: G02 -->
+<div class="nota-box" id="practica-2-54">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Ahorro con aportaciones al final de mes</p>
+  <p>Solicita saldo inicial C≥0, tasa mensual i≥0, aportación mensual A≥0 y número de meses n entero no negativo. Cada mes aplica primero el interés y después agrega A: saldo=saldo*(1+i)+A. Imprime una tabla con mes, interés, aportación y saldo final.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>C=1000, i=0.01, A=100, n=2 → saldo final $1221.10.</pre>
+  <pre>n=0 → saldo C, sin meses procesados.</pre>
+  <p><b>Observación:</b> La tasa se ingresa en forma decimal: 0.01 es 1% mensual. Modelo ficticio sin comisiones ni impuestos.</p>
+</div>
+
+<!-- Identificador de trabajo: G03 -->
+<div class="nota-box" id="practica-2-55">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Frecuencia y monto medio observado</p>
+  <p>Recibe una lista de montos no negativos, uno por contrato ficticio observado durante el mismo periodo. Un cero significa que no hubo pago. En este modelo cada contrato puede tener como máximo un evento.</p>
+  <ol>
+    <li>Calcula cantidad de contratos, cantidad con pago positivo y proporción con pago.</li>
+    <li>Calcula media de todos los montos y media de los positivos.</li>
+    <li>Usa None cuando un promedio o proporción no esté definido.</li>
+  </ol>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>[0,1200,500,0,3500,800] → 6 contratos; 4 positivos; proporción 2/3; media global 1000; media entre positivos 1500.</pre>
+  <pre>[0,0] → proporción 0, media global 0 y media positiva None; [] → medias y proporción None.</pre>
+  <p><b>Observación:</b> Explica los denominadores. Sin el supuesto de como máximo un evento, esta proporción no representa una frecuencia general de eventos por contrato.</p>
+</div>
+
+<!-- Identificador de trabajo: G04 -->
+<div class="nota-box" id="practica-2-56">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Pagos de una lista de pérdidas</p>
+  <p>Escribe una función para la regla de deducible y límite y aplícala a cada pérdida de una lista. Devuelve una lista de pagos, el pago total y la cantidad de pagos positivos. El límite se aplica a cada pérdida, no al total. Conserva la lista original.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Pérdidas [0,300,1500], d=500, M=800 → pagos [0,0,800]; total 800; un pago positivo.</pre>
+  <pre>[] → pagos []; total 0; cero pagos positivos.</pre>
+</div>
+
+<!-- Identificador de trabajo: G05 -->
+<div class="nota-box" id="practica-2-57">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Valor esperado de un pago discreto</p>
+  <p>Se proporcionan pagos x=[0,1000,5000] y probabilidades p=[0.8,0.15,0.05]. El valor esperado se define como la suma de cada pago multiplicado por su probabilidad. Programa el cálculo sin requerir teoría actuarial previa.</p>
+  <ol>
+    <li>Verifica que las listas sean no vacías y tengan igual longitud.</li>
+    <li>Comprueba probabilidades no negativas cuya suma difiera de 1 a lo más en 1e-9.</li>
+    <li>Calcula la suma ponderada y muestra el resultado.</li>
+  </ol>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Los datos suministrados producen valor esperado 400.</pre>
+  <pre>p=[0.8,0.15,0.10] debe rechazarse: no suma 1.</pre>
+  <p><b>Observación:</b> El valor esperado de este modelo no es una prima comercial.</p>
+</div>
+
+<!-- Identificador de trabajo: G06 -->
+<div class="nota-box" id="practica-2-58">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Muestreo de matrículas ficticias</p>
+  <p>Construye diez matrículas únicas, ACT001 a ACT010. Usa un generador random.Random(2026) para seleccionar cinco sin reemplazo mediante sample(). Después realiza una selección con reemplazo mediante choices(..., k=5).</p>
+  <ol>
+    <li>Verifica que la muestra sin reemplazo tenga cinco elementos distintos.</li>
+    <li>Explica por qué la selección con reemplazo puede repetir elementos, aunque una muestra concreta no los repita.</li>
+    <li>Repite con la misma semilla y después con otra.</li>
+  </ol>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Sin reemplazo: len(muestra)==5 y len(set(muestra))==5.</pre>
+  <pre>No se exige una lista fija de resultados entre versiones distintas de Python.</pre>
+  <p><b>Observación:</b> No utilices set.pop() para muestrear. Se usa una población con identificadores únicos.</p>
+</div>
+
+<!-- Identificador de trabajo: G07 -->
+<div class="nota-box" id="practica-2-59">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Simulación de dos dados</p>
+  <p>Simula 6000 lanzamientos de dos dados equilibrados de seis caras usando un generador con semilla 2026. Construye un diccionario de frecuencias para las sumas de 2 a 12. Estima la probabilidad de suma 7 y compara con 6/36.</p>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>Las frecuencias deben sumar 6000 y las claves deben cubrir los enteros de 2 a 12.</pre>
+  <pre>Una pareja de resultados 1 y 6 produce suma 7.</pre>
+  <p><b>Observación:</b> Las sumas no son equiprobables. La estimación no tiene que ser exactamente 1/6; verifica propiedades del experimento, no una salida aleatoria exacta.</p>
+</div>
+
+<!-- Identificador de trabajo: G08 -->
+<div class="nota-box" id="practica-2-60">
+  <h1 class="number-title-practica">Práctica</h1>
+  <p class="titulo-ejercicio">Del valor esperado a una simulación de pagos</p>
+  <p>Usa los pagos y probabilidades del ejercicio de valor esperado: x=[0,1000,5000] y p=[0.8,0.15,0.05]. Con random.choices(), semilla 2026 y 5000 selecciones con reemplazo, simula pagos independientes.</p>
+  <ol>
+    <li>Calcula la media observada y las frecuencias.</li>
+    <li>Compara la media observada con 400.</li>
+    <li>Repite con otra semilla y explica las diferencias.</li>
+    <li>Como ampliación, escribe un reporte con parámetros, tamaño, semilla y resultados.</li>
+  </ol>
+  <p><b>Ejemplos o comprobaciones:</b></p>
+  <pre>La lista debe tener 5000 resultados y todos pertenecer a {0,1000,5000}.</pre>
+  <pre>Las frecuencias suman 5000; no se exige media exactamente igual a 400.</pre>
+  <p><b>Observación:</b> Reto integrador. Una diferencia entre media simulada y valor esperado no demuestra por sí sola un fallo del algoritmo.</p>
+</div>
+</main>
+<footer>
+  <p class="volver-arriba"><a href="#inicio">Volver al inicio</a></p>
+  <p>Programación I · Licenciatura en Actuaría · Universidad del Mar, campus Huatulco</p>
+  <p>Edición revisada: <time datetime="2026-11-17">17 de noviembre de 2026</time></p>
+</footer>
+</body>
+</html>
