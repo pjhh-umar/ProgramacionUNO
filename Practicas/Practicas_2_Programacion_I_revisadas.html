@@ -1,0 +1,511 @@
+
+<!DOCTYPE html PUBLIC >
+
+<html lang="es">
+  <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Following part is mathjax, for latex-->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    <!-- This part is for jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <!-- This part is to load main.js -->
+    <script type="text/javascript" src="https://pjhh-umar.github.io/ProgramacionUNO/main.js"></script>
+
+    
+
+
+    <!-- Next part is for new coomands -->
+    <script>
+      window.MathJax = {
+        tex: {
+          macros: {
+            sen: "\\operatorname{sen}",
+            seg: ["\\overrightarrow{#1}", 1],
+            id: "\\operatorname{id}",
+          },
+          tags: "ams", /* this part is for numbered equations */
+          inlineMath: [['$', '$'], ['\\(', '\\)']]
+        }
+      };
+    </script>
+
+    
+    <!-- This part restart counter of cards to start at n+1 -->
+    <style>
+      body.fondo-body{
+        counter-reset: temaCounter 2 sectionCounter;
+      }
+     
+      h1.page-title-practica{
+        counter-reset: semanaCounter 2 sectionCounter  subsectionCounter;
+      } 
+    </style>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" , href="https://pjhh-umar.github.io/ProgramacionUNO/style.css" />
+    <!-- Top Menu  -->
+    
+          
+    <header class="main-header">
+        
+      <div class="logo_superior_umar">
+      <a href="https://www.umar.mx" target="_blank"><img src="https://pjhh-umar.github.io/ProgramacionUNO/Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+      </div>
+      <div class="contenedor_titulo">
+      <div class="title">Programación I</div>
+      <div class="subtitle">Universidad del Mar, campus Huatulco</div>
+      <div class="subsubtitle">Licenciatura en Actuaría </div>
+      <!-- <div class="subsubtitle"><a href="https://www.umar.mx/web/ensenanza/licenciaturas/licenciatura_en_administracion_turistica" target="_blank">Licenciatura en Administración Turística</a> </div>    -->
+  
+      </div>
+      <div class="logo_superior_umar">
+        <a href="https://www.umar.mx" target="_blank"><img src="https://pjhh-umar.github.io/ProgramacionUNO/Imagenes/umar_logo_hd.webp" alt="Logo_UMAR" width="110%" height="auto"></a>
+      </div>
+
+  
+    </header>
+
+        <nav class="top-nav">
+          <ul>
+            <li> <a href="https://pjhh-umar.github.io/ProgramacionUNO/Home.html"> Inicio  </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/ProgramacionUNO/Informacion_General.html"> Información </a> </li>
+            <li> <a href="https://pjhh-umar.github.io/ProgramacionUNO/Notas.html"> Notas  </a> </li>
+<!-- <li> <a href="https://pjhh-umar.github.io/ProgramacionUNO/Quizes.html"> Quizes  </a> </li> -->
+            <li> <a href="https://pjhh-umar.github.io/ProgramacionUNO/Practicas.html">Prácticas</a> </li>
+            <li> <a href="https://pjhh-umar.github.io/ProgramacionUNO/Enlaces_externos.html"> Links </a> </li>
+          </ul>
+          </nav>
+       
+        <!-- 
+          <nav class="small-nav" align=right>
+            <button onclick="myFunction()">Claro/Obscuro 
+          </nav> 
+        -->
+
+      <!-- This part is for title in tab-->
+            
+      <title>Prácticas 2</title>
+      </head>  
+
+
+
+  <body class="fondo-body" ><h1 class="page-title-practica"> Prácticas 2 </h1>   
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Se suele decir que un año humano equivale a $7$ años caninos. Sin embargo, esta conversión no toma en cuenta que los perros maduran más rápido durante sus primeros años. Para esta práctica, considera que cada uno de los dos primeros años equivale a $10.5$ años caninos y cada año adicional equivale a $4$ años caninos.</p>
+<p>Escribe un programa en Python que pregunte al usuario si tiene un perro como mascota: ingresa <code>1</code> si la respuesta es sí y <code>2</code> si la respuesta es no. Si ingresa <code>1</code>, solicita la edad de su perro en años humanos (puede incluir fracciones de año) e imprime la edad canina correspondiente. Si ingresa <code>2</code>, muestra un mensaje que lo invite a considerar la adopción responsable de un perro. Si ingresa otra opción, informa que no es válida.</p>
+<p><b>Observación:</b> La edad debe ser no negativa. Por ejemplo, un perro de $1$ año tiene $10.5$ años caninos y uno de $3$ años tiene $25$ años caninos según este modelo.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>La siguiente fórmula permite determinar el día de la semana correspondiente al $1$ de enero de un año del calendario gregoriano:</p>
+$$\mathrm{dia\_semana}=\left(\mathrm{año}+\left\lfloor\frac{\mathrm{año}-1}{4}\right\rfloor-\left\lfloor\frac{\mathrm{año}-1}{100}\right\rfloor+\left\lfloor\frac{\mathrm{año}-1}{400}\right\rfloor\right)\%7.$$
+<p>El resultado es un número entero entre $0$ y $6$: $0$ representa el domingo, $1$ el lunes y así sucesivamente hasta $6$, que representa el sábado.</p>
+<p>Escribe un programa en Python que solicite al usuario un año entero positivo y muestre el nombre completo del día de la semana en que cayó el $1$ de enero. Por ejemplo, para $2026$ debe imprimir <code>jueves</code>.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>En la librería de la UMAR se ofrecen descuentos de acuerdo con el monto de la compra. El porcentaje correspondiente se determina mediante el siguiente criterio:</p>
+$$\begin{cases}
+0\%, & 0\leq\text{compra}<50,\\
+2.5\%, & 50\leq\text{compra}<100,\\
+5\%, & 100\leq\text{compra}<500,\\
+10\%, & 500\leq\text{compra}.
+\end{cases}$$
+<p>Escribe un programa en Python que solicite el monto de una compra en pesos, determine el descuento y muestre el monto original, la cantidad descontada y el total a pagar. Si el monto ingresado es negativo, solicita nuevamente un valor válido.</p>
+<p>Por ejemplo, para una compra de $120$ pesos, el descuento es de $6$ pesos y el total a pagar es de $114$ pesos.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Una aseguradora ofrece una cobertura con deducible de $500$ pesos y un límite de pago de $4\,000$ pesos por siniestro. Si el costo de un siniestro es $x$, el pago de la aseguradora se calcula como:</p>
+$$\text{pago}=\min\{\max\{x-500,0\},4\,000\}.$$
+<p>Escribe un programa en Python que solicite al usuario el costo no negativo de un siniestro y determine cuánto paga la aseguradora y cuánto queda a cargo de la persona asegurada. Muestra ambos montos con dos decimales.</p>
+<p>Por ejemplo, si el siniestro cuesta $2\,000$ pesos, la aseguradora paga $1\,500$ pesos y la persona asegurada paga $500$ pesos. Comprueba también qué sucede si el costo es menor que el deducible o supera la cobertura.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite un número real y determine si es mayor que $10$, menor que $10$ o igual a $10$. Imprime el mensaje correspondiente: <code>Mayor que 10</code>, <code>Menor que 10</code> o <code>Igual a 10</code>.</p>
+<p>Luego, imprime a qué distancia se encuentra el número ingresado de $10$. Por ejemplo, para $7.5$ se debe indicar <code>Menor que 10</code> y una distancia de $2.5$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite al usuario tres números reales, determine el mayor y el menor de ellos y los imprima mediante un mensaje adecuado. Si alguno de estos valores se repite, indica cuántas veces aparece.</p>
+<p>Por ejemplo, si se ingresan $4$, $7$ y $7$, el mayor es $7$ y aparece dos veces; el menor es $4$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite un año entero positivo y determine si es bisiesto. Imprime un mensaje con el año ingresado y el resultado.</p>
+<p><b>Observación:</b> Un año es bisiesto si es múltiplo de $4$, excepto cuando es múltiplo de $100$ y no de $400$. Por ejemplo, $1900$ no fue bisiesto, mientras que $2000$ sí lo fue. Comprueba también los años $2024$ y $2025$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Una convocatoria establece, para este ejercicio, que una persona puede solicitar una beca si su promedio está entre $0$ y $10$, es al menos $8.5$ y su porcentaje de asistencia es al menos $85\%$.</p>
+<p>Escribe un programa en Python que solicite el promedio y el porcentaje de asistencia de un estudiante. Valida que estén en los intervalos $[0,10]$ y $[0,100]$, respectivamente. Luego, imprime si cumple ambos requisitos y, en caso contrario, indica cuál o cuáles le faltan.</p>
+<p>Por ejemplo, un promedio de $9$ con asistencia de $82\%$ no cumple el requisito de asistencia.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite al usuario un número entero positivo y utilice un ciclo <code>for</code> para determinar e imprimir la suma de sus dígitos.</p>
+<p>Por ejemplo, si el usuario ingresa $105$, se debe imprimir $1+0+5=6$. Comprueba también el caso en que el número tenga un solo dígito.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite al usuario un número entero positivo $n$ e imprima el número que se obtiene al invertir el orden de sus dígitos.</p>
+<p>Por ejemplo, si $n=1234$, se debe imprimir $4321$. Si $n=1200$, se debe imprimir $21$, pues los ceros iniciales no se conservan al representar el resultado como un número entero.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Un número entero positivo es <b>capicúa</b> si se lee igual de izquierda a derecha que de derecha a izquierda. Por ejemplo, $12321$, $55555$ y $11611$ son capicúas.</p>
+<p>Escribe un programa en Python que solicite al usuario un número entero positivo y utilice un ciclo <code>for</code> para determinar e imprimir si es capicúa. Comprueba tu programa con un número de un solo dígito y con uno que termine en cero.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite al usuario un número entero positivo y utilice un ciclo <code>for</code> para imprimirlo en <b>notación desarrollada</b>.</p>
+<p>Por ejemplo, si ingresa $897$, se debe imprimir $$897=8\times10^2+9\times10^1+7\times10^0.$$</p>
+<p><b>Observación:</b> Incluye también los términos cuyo dígito es cero. Por ejemplo, para $907$ debe aparecer el término $0\times10^1$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Si $h$ es la altura en metros y $w$ el peso en kilogramos de una persona, se define su <b>índice de masa corporal</b> (<b>IMC</b>) como:</p>
+\begin{equation}\label{eqn:imc}\text{IMC}:=\frac{w}{h^2}.\end{equation}
+<p>Escribe un programa en Python que solicite al usuario su nombre, altura y peso. Valida que la altura y el peso sean positivos y utiliza la fórmula \eqref{eqn:imc} para calcular el IMC. Imprime el nombre y el valor calculado con dos decimales, sin realizar una interpretación clínica.</p>
+<p>Por ejemplo: <code>Hola, Benito. Tu IMC calculado es 22.20.</code></p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>La panadería <b>El Bolillo Feliz</b> vende cada pieza de pan fresco a $3.125$ ajolopesos. El pan del día anterior tiene un descuento del $60\%$ sobre ese precio.</p>
+<p>Escribe un programa en Python que solicite cuántas piezas de pan fresco y cuántas del día anterior se compraron. Valida que ambas cantidades sean enteros no negativos. Calcula el precio total antes del descuento, la cantidad descontada y el total a pagar. Presenta los resultados en una tabla ordenada con dos decimales.</p>
+<p>Por ejemplo, para $4$ piezas de pan fresco y $2$ del día anterior, se puede imprimir:</p>
+<pre>El Bolillo Feliz
+Piezas de pan | Precio | Descuento | Total a pagar
+       6      | 18.75  |    3.75   |      15.00</pre>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que imprima la <b>tabla pitagórica</b> con los productos de todas las combinaciones de números enteros del $1$ al $10$. La tabla debe tener etiquetas del $1$ al $10$ en la primera fila y en la primera columna, como se muestra a continuación:</p>
+<center><img src="https://pjhh-umar.github.io/ProgramacionUNO/Imagenes/tabla_pitagorica.jpg" alt="Tabla pitagórica" width="90%" height="auto"></center>
+<p><b>Sugerencia:</b> Utiliza dos ciclos y alinea los productos para que las columnas sean fáciles de leer.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite al usuario un número entero positivo $n$ e imprima una figura como la siguiente. Por ejemplo, para $n=6$:</p>
+<pre>1
+1 2
+1 2 3
+1 2 3 4
+1 2 3 4 5
+1 2 3 4 5 6
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1</pre>
+<p>Comprueba que, cuando $n=1$, la figura tenga una sola fila.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>El <b>triángulo de Pascal</b> se construye comenzando con un $1$ en la primera fila. Cada fila posterior empieza y termina en $1$; los números interiores son la suma de los dos que aparecen justo encima.</p>
+<p>Escribe un programa en Python que solicite un número entero positivo $n$ e imprima las primeras $n$ filas del triángulo. Por ejemplo, para $n=5$:</p>
+<pre>1
+1 1
+1 2 1
+1 3 3 1
+1 4 6 4 1</pre>
+<p><b>Observación:</b> Este triángulo también aparece al contar combinaciones de resultados posibles en experimentos sencillos.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Un número entero positivo $n$ es <b>perfecto</b> si la suma de sus divisores positivos menores que $n$ es igual a $n$. Por ejemplo, $6$ es perfecto porque sus divisores positivos menores que $6$ son $1$, $2$ y $3$, y $1+2+3=6$.</p>
+<p>Escribe un programa en Python que solicite al usuario un número entero positivo $n$ y determine e imprima si es perfecto. Comprueba que $1$ no se clasifique como número perfecto.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que encuentre e imprima los <b>primeros cuatro números perfectos</b>. Utiliza la condición de la práctica anterior y muestra también los divisores positivos menores que cada número encontrado.</p>
+<p><b>Observación:</b> El quinto número perfecto es mucho mayor que los cuatro anteriores; por ello, esta práctica se limita a los primeros cuatro.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>El zodíaco chino asigna animales a los años en un ciclo de $12$. En la siguiente tabla se muestra un ciclo completo. El patrón se repite; por ejemplo, $2012$ fue otro año del dragón y $1999$ fue otro año de la liebre.</p>
+<center><img src="https://pjhh-umar.github.io/ProgramacionUNO/Imagenes/Zodiaco_chino.JPG" alt="Tabla de los animales del zodíaco chino" width="50%" height="auto"></center>
+<p>Escribe un programa en Python que solicite un año entero no negativo y muestre el animal correspondiente. Comprueba que el resultado para dos años separados por $12$ sea el mismo.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que utilice ciclos para encontrar e imprimir todos los números enteros de dos cifras cuya suma de dígitos sea impar.</p>
+<p>Por ejemplo, $12$ cumple la condición porque $1+2=3$, mientras que $11$ no la cumple porque $1+1=2$. Al final, indica cuántos números encontraste.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>En una elección hay cinco candidaturas, identificadas mediante los números del $1$ al $5$. Los votos se ingresan uno por uno y el número <code>0</code> indica que terminó el registro.</p>
+<p>Escribe un programa en Python que utilice una lista para contar los votos válidos de cada candidatura. Si se ingresa un entero distinto de $0$, $1$, $2$, $3$, $4$ o $5$, omítelo y continúa el registro. Imprime el número de votos y el porcentaje de cada candidatura respecto del total de votos válidos.</p>
+<p><b>Observación:</b> Si el primer dato es <code>0</code>, informa que no se registraron votos y evita dividir entre cero.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Al lanzar dos dados distinguibles, cada resultado puede escribirse como un par ordenado $(i,j)$, donde $i$ y $j$ toman valores del $1$ al $6$. Existen $36$ resultados posibles.</p>
+<p>Escribe un programa en Python que recorra todos esos pares con dos ciclos y guarde en un diccionario cuántas veces aparece cada suma, del $2$ al $12$. Imprime el diccionario y calcula la proporción de resultados cuya suma es $7$.</p>
+<p>Por ejemplo, la suma $2$ aparece una vez, mientras que la suma $7$ aparece seis veces.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que recorra los números enteros de cuatro cifras y encuentre aquellos en los que la suma de los dígitos de las posiciones impares sea igual a la de las posiciones pares. Cuenta las posiciones de izquierda a derecha, comenzando en $1$.</p>
+<p>Por ejemplo, $1221$ cumple la condición porque $1+2=2+1$. Imprime los números encontrados y la cantidad total.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>La <b>conjetura de Ulam</b>, también llamada conjetura de Collatz, propone el siguiente proceso para un número entero positivo:</p>
+<ol><li>Si el número es par, divídelo entre $2$.</li><li>Si es impar, multiplícalo por $3$ y súmale $1$.</li><li>Repite el procedimiento con el nuevo número.</li></ol>
+<p>Se conjetura que, cualquiera que sea el entero inicial, se llega a $1$ después de un número finito de pasos. Por ejemplo, si se inicia en $26$, se obtiene $$26,13,40,20,10,5,16,8,4,2,1.$$</p>
+<p>Escribe un programa en Python que solicite un número entero positivo, imprima los términos de la sucesión hasta llegar a $1$ e indique cuántos pasos se realizaron y cuál fue el mayor valor alcanzado.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite al usuario las coordenadas de dos puntos distintos del plano, $A=(x_1,y_1)$ y $B=(x_2,y_2)$, escritos en el formato <code>(1,5)</code>. Valida que no sean el mismo punto.</p>
+<p>Luego, determina e imprime la distancia entre ellos mediante la fórmula $$d(A,B)=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}.$$</p>
+<p>Por ejemplo, si $A=(1,1)$ y $B=(4,5)$, la distancia es $5$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite las coordenadas de dos puntos distintos $A=(x_1,y_1)$ y $B=(x_2,y_2)$ en el formato <code>(1,5)</code>. Luego, determina e imprime la pendiente de la recta que pasa por ellos.</p>
+<p><b>Observación:</b> Si $x_1\neq x_2$, la pendiente es $$m=\frac{y_2-y_1}{x_2-x_1}.$$ Si $x_1=x_2$, la recta es vertical y su pendiente <b>no está definida</b>; imprime ese mensaje en lugar de dividir entre cero. Si los puntos coinciden, solicita otro punto.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite tres puntos $A=(x_1,y_1)$, $B=(x_2,y_2)$ y $C=(x_3,y_3)$ en el formato <code>(1,5)</code>, y determine e imprima si son colineales.</p>
+<p><b>Sugerencia:</b> Cuando los puntos son distintos, puedes comprobar si $$(x_2-x_1)(y_3-y_1)=(y_2-y_1)(x_3-x_1),$$ sin calcular pendientes ni dividir entre cero.</p>
+<p><b>Observación:</b> Si dos o más puntos coinciden, informa primero cuáles son iguales; en ese caso no hay tres puntos distintos con los que formar un triángulo.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que reciba tres puntos $A=(x_1,y_1)$, $B=(x_2,y_2)$ y $C=(x_3,y_3)$, que serán los vértices de un triángulo. Calcula las longitudes de sus tres lados, su perímetro y su área.</p>
+<p><b>Sugerencia:</b> Si las longitudes son $a$, $b$ y $c$, el perímetro es $a+b+c$. Para el área utiliza la <b>fórmula de Herón</b>: $$s=\frac{a+b+c}{2},\qquad \text{área}=\sqrt{s(s-a)(s-b)(s-c)}.$$</p>
+<p>Si los puntos coinciden o son colineales, informa que no forman un triángulo. Por ejemplo, los puntos $(0,0)$, $(3,0)$ y $(0,4)$ forman un triángulo de perímetro $12$ y área $6$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Una brigada debe elegir, entre varias ubicaciones, el punto más cercano a un centro de atención. Las coordenadas del centro y de las ubicaciones se guardan como pares en una lista.</p>
+<p>Escribe un programa en Python que recorra la lista, calcule la distancia de cada ubicación al centro e imprima la ubicación más cercana y su distancia. Si varias están a la misma distancia mínima, muestra todas ellas.</p>
+<p>Por ejemplo, si el centro es $(0,0)$ y las ubicaciones son <code>[(3,4), (1,1), (-1,-1)]</code>, las dos últimas están a la misma distancia mínima.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite un número entero positivo $k$ y encuentre el menor entero positivo $n$ para el cual la suma de los primeros $n$ enteros positivos sea <b>estrictamente mayor</b> que $k$.</p>
+<p>Por ejemplo, si $k=10$, se debe imprimir $n=5$, pues $1+2+3+4=10$ y $1+2+3+4+5=15>10$. Imprime también la suma obtenida.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Una persona deposita $D$ pesos al <b>inicio</b> de cada mes en una cuenta que ofrece una tasa de interés mensual $r$. Si al inicio el saldo es $A_0=0$, el saldo al terminar el mes $t$ se obtiene mediante $$A_t=(A_{t-1}+D)(1+r).$$</p>
+<p>Escribe un programa en Python que solicite $D\geq0$, $r\geq0$ y un número entero positivo de meses $n$. Utiliza un ciclo para imprimir el saldo al terminar cada mes y el saldo final.</p>
+<p>Por ejemplo, si $D=100$, $r=0.01$ y $n=2$, los saldos son $101.00$ y $203.01$ pesos, respectivamente. Ingresa la tasa $1\%$ como <code>0.01</code>.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>El valor de $\pi$ se puede aproximar mediante la <b>serie de Leibniz</b>. Para cada entero $n\geq0$, considera la suma parcial $$S_n=\sum_{k=0}^{n}(-1)^k\frac{4}{2k+1}=4-\frac{4}{3}+\frac{4}{5}-\cdots+(-1)^n\frac{4}{2n+1}.$$ Se sabe que $\displaystyle\lim_{n\to\infty}S_n=\pi$.</p>
+<p>Escribe un programa en Python que solicite al usuario un entero no negativo $n$, calcule e imprima $S_n$ y el valor absoluto de la diferencia entre $S_n$ y <code>math.pi</code>.</p>
+<p><b>Observación:</b> $S_n$ contiene $n+1$ términos; en particular, $S_0=4$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>El valor de $\pi$ también se puede aproximar mediante la <b>serie de Nilakantha</b>. Sus primeros términos son $$3+\frac{4}{2\cdot3\cdot4}-\frac{4}{4\cdot5\cdot6}+\frac{4}{6\cdot7\cdot8}-\cdots.$$</p>
+<p>Para cada entero $n\geq0$, considera la suma parcial $$S_n=3+\sum_{k=1}^{n}(-1)^{k+1}\frac{4}{(2k)(2k+1)(2k+2)}.$$ Se sabe que $\displaystyle\lim_{n\to\infty}S_n=\pi$.</p>
+<p>Escribe un programa en Python que solicite un entero no negativo $n$, calcule e imprima $S_n$ y la diferencia absoluta entre $S_n$ y <code>math.pi</code>.</p>
+<p><b>Observación:</b> $S_0=3$ y $S_1=3+\frac{4}{2\cdot3\cdot4}$; el signo alterna a partir del siguiente término.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Sea $x\in\mathbb{R}$. La función seno puede aproximarse mediante la suma parcial de su serie de Taylor $$S_n(x)=\sum_{k=0}^{n}(-1)^k\frac{x^{2k+1}}{(2k+1)!}=x-\frac{x^3}{3!}+\frac{x^5}{5!}-\cdots+(-1)^n\frac{x^{2n+1}}{(2n+1)!}.$$ Para cada $x$ fijo, estas sumas se aproximan a $\sen(x)$ cuando aumenta $n$.</p>
+<p>Escribe un programa en Python que solicite un número real $x$ y un entero no negativo $n$. Calcula e imprime $S_n(x)$ y compáralo con <code>math.sin(x)</code>.</p>
+<p><b>Observación:</b> El valor de $x$ se expresa en radianes y $S_n(x)$ contiene $n+1$ términos.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>La <b>sucesión de Fibonacci</b> comienza con $1,1$ y cada término posterior es la suma de los dos anteriores: $$1,1,2,3,5,8,13,21,\ldots.$$ Para un modelo idealizado de parejas de conejos, llamaremos $P_m$ al número de parejas al terminar el mes $m$ y fijaremos $P_0=1$, $P_1=1$ y $P_m=P_{m-1}+P_{m-2}$ para $m\geq2$.</p>
+<ol>
+<li>Escribe un programa en Python que solicite un entero positivo $k$ e imprima los primeros $k$ términos de la sucesión.</li>
+<li>Solicita un entero positivo $n$ e imprime cuántas parejas indica el modelo al terminar $n$ años; recuerda que $n$ años equivalen a $12n$ meses.</li>
+<li>Solicita un entero positivo $M$ y determina el menor número de meses necesario para tener <b>al menos</b> $M$ parejas. Por ejemplo, para $M=4$, el resultado es $4$ meses, pues $P_3=3$ y $P_4=5$.</li>
+</ol>
+<p><b>Observación:</b> El ejercicio utiliza un modelo matemático simplificado; el resultado se expresa en parejas, no en individuos.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Un triángulo rectángulo cuyos tres lados tienen longitudes enteras forma una <b>terna pitagórica</b>. Si $a$ y $b$ son los catetos y $c$ es la hipotenusa, entonces $a^2+b^2=c^2$.</p>
+<p>Escribe un programa en Python que encuentre e imprima las ternas $(a,b,c)$ con $1\leq a\leq b\lt c\leq500$. Imprime cada terna una sola vez y muestra cuántas encontraste.</p>
+<p>Por ejemplo, $(3,4,5)$ es una terna pitagórica porque $3^2+4^2=5^2$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite un entero positivo impar $n$ y dibuje un rombo con asteriscos. El valor $n$ indica el número de filas y el número máximo de asteriscos en la fila central.</p>
+<p>Por ejemplo, si $n=9$:</p>
+<pre>        *
+      * * *
+    * * * * *
+  * * * * * * *
+* * * * * * * * *
+  * * * * * * *
+    * * * * *
+      * * *
+        *</pre>
+<p>Comprueba que $n=1$ imprima un solo asterisco.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite un número entero positivo $n$ e imprima una figura con dos grupos de números por fila. En la fila $i$, imprime de $1$ a $n-i+1$ a la izquierda y esos mismos números en orden inverso a la derecha, separando ambos grupos con espacios que aumenten en cada fila.</p>
+<p>Por ejemplo, para $n=4$:</p>
+<pre>1 2 3 4   4 3 2 1
+1 2 3       3 2 1
+1 2           2 1
+1               1</pre>
+<p><b>Observación:</b> Mantén alineadas las columnas aunque $n$ tenga dos dígitos.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que solicite un entero positivo $N\leq10^5$ y encuentre el menor entero positivo $M$ cuyo producto de dígitos sea $N$.</p>
+<p>Por ejemplo, si $N=10$, debe imprimir $M=25$, pues $2\times5=10$. Si $N=1$, el resultado es $M=1$. Si no existe tal número, imprime un mensaje adecuado; por ejemplo, ningún producto de dígitos puede ser igual a $11$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Para encontrar el <b>máximo común divisor</b> de dos números enteros positivos se puede utilizar el <b>algoritmo de Euclides</b>. Divide $a$ entre $b$ y escribe $a=qb+r$, donde $0\leq r\lt b$. Luego, reemplaza $(a,b)$ por $(b,r)$ y repite el procedimiento hasta que el segundo número sea $0$. El primer número de esa última pareja es el máximo común divisor.</p>
+<p>Escribe un programa en Python que solicite dos enteros positivos, muestre las divisiones realizadas y determine su máximo común divisor. Por ejemplo, para $252$ y $105$, el resultado es $21$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Dos actividades periódicas se realizan cada $a$ y cada $b$ días, respectivamente. Si coinciden hoy, volverán a coincidir después de $\mathrm{MCM}(a,b)$ días, donde $\mathrm{MCM}$ es el mínimo común múltiplo.</p>
+<p>Escribe un programa en Python que solicite dos enteros positivos $a$ y $b$, calcule su máximo común divisor con el algoritmo de Euclides y utilice $$\mathrm{MCM}(a,b)=\frac{ab}{\mathrm{MCD}(a,b)}$$ para indicar dentro de cuántos días volverán a coincidir. Por ejemplo, si $a=6$ y $b=8$, coincidirán después de $24$ días.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que encuentre e imprima todos los números enteros de cuatro cifras para los cuales la <b>suma</b> de sus dígitos sea igual al <b>producto</b> de sus dígitos. Imprime también la cantidad de números encontrados.</p>
+<p>Por ejemplo, $1124$ cumple la condición porque $1+1+2+4=1\times1\times2\times4=8$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que, dado un diccionario <b>no vacío</b> cuyos valores son cadenas de texto, imprima el primer valor más largo que aparezca al recorrer el diccionario.</p>
+<p>Por ejemplo, si el diccionario es <code>frutas = {'fruta': 'manzana', 'color': 'verde'}</code>, se debe imprimir <code>manzana</code>. Si dos valores tienen la misma longitud máxima, imprime el que aparece primero en el orden de inserción.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que reciba una lista de cadenas que representan números enteros, convierta sus elementos a enteros y calcule la suma resultante.</p>
+<p>Por ejemplo, <code>['1', '3', '5']</code> se convierte en <code>[1, 3, 5]</code> y su suma es <code>9</code>. Comprueba también una lista que incluya números negativos. Si la lista está vacía, la suma debe ser $0$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que reciba una lista de cadenas y determine cuáles se repiten. Imprime cada cadena duplicada <b>una sola vez</b>, en el orden en que aparece por primera vez. Si no hay duplicados, imprime <code>Sin duplicados</code>.</p>
+<p>Por ejemplo, <code>frutas = ['manzana', 'naranja', 'plátano', 'manzana']</code> tiene como duplicado a <code>manzana</code>, mientras que <code>nombres = ['Daniela', 'Nayeli', 'Sarah']</code> no tiene duplicados.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>En el diccionario <code>registro</code>, cada clave es la matrícula de un estudiante y su valor es <code>'Si'</code> si asistió a clase o <code>'No'</code> si no asistió.</p>
+<p>Crea un programa en Python que cuente e imprima, mediante un mensaje adecuado, cuántos estudiantes asistieron y cuántos no asistieron. Utiliza el siguiente diccionario:</p>
+<pre>registro = {
+    '2023260134': 'Si', '2023260135': 'No', '2023260136': 'Si',
+    '2023260137': 'No', '2023260138': 'Si', '2023260139': 'Si',
+    '2023260140': 'Si', '2023260141': 'No', '2023260142': 'No'
+}</pre>
+<p>Para estos datos se debe indicar que asistieron <code>5</code> estudiantes y no asistieron <code>4</code>.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Una aseguradora registra los montos no negativos de varios siniestros en una lista. Cada siniestro tiene un deducible de $500$ pesos y la aseguradora paga, como máximo, $4\,000$ pesos por siniestro.</p>
+<p>Crea un programa en Python que recorra la lista, guarde en otra lista el pago correspondiente a cada siniestro y muestre el pago total. Utiliza la regla $$\text{pago}=\min\{\max\{\text{monto}-500,0\},4\,000\}.$$</p>
+<p>Por ejemplo, para <code>[200, 800, 5000]</code>, la lista de pagos debe ser <code>[0, 300, 4000]</code> y el total $4\,300$ pesos. Si la lista está vacía, el pago total es $0$.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que, dada una lista <b>no vacía</b> de cadenas, imprima el índice de la primera palabra con longitud máxima. Recuerda que el primer elemento de una lista tiene índice $0$.</p>
+<p>Por ejemplo, para <code>palabras1 = ['Odio', 'Remordimiento', 'Venganza']</code> se debe imprimir <code>1</code>. Para <code>palabras2 = ['Amor', 'Odio']</code> se debe imprimir <code>0</code>, pues ambas tienen la misma longitud y se elige la primera.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Servicios Escolares de la Universidad del Mar, campus Huatulco, guardó en una lista algunas respuestas de un registro. Crea un programa en Python que cuente las entradas <code>'Hombre'</code> y <code>'Mujer'</code>, sin distinguir mayúsculas de minúsculas, y almacene los resultados en un diccionario.</p>
+<p>Por ejemplo, utiliza la siguiente lista:</p>
+<pre>estudiantes = ['Hombre', 'Mujer', 'mujer', 'hombre', 'hombre',
+               'hombre', 'mujer', 'hombre', 'Mujer', 'Hombre',
+               'Mujer', 'Hombre', 'mujer']</pre>
+<p>Se debe imprimir <code>{'Hombres': 7, 'Mujeres': 6}</code>. Si aparece una respuesta distinta de esas dos, no la incluyas en ninguno de los conteos.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Una tabla registra el número de personas que permanecen en un grupo al inicio de edades consecutivas. Por ejemplo, <code>sobrevivientes = [100, 92, 80]</code> indica que hay $100$ personas al inicio de la primera edad, $92$ al inicio de la siguiente y $80$ al inicio de la tercera.</p>
+<p>Crea un programa en Python que, para cada par de entradas consecutivas, calcule el número de salidas y la proporción que representa respecto de las personas presentes al inicio de ese intervalo. Guarda los resultados en una lista y muéstralos con dos decimales.</p>
+<p>En el ejemplo, las salidas son $8$ y $12$; las proporciones son $8/100=0.08$ y $12/92\approx0.13$. Valida que la lista tenga al menos dos valores y que sea no creciente, con cantidades iniciales positivas en cada intervalo que se calcule.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que, dada una lista de nombres, guarde en un diccionario los nombres que comienzan con <code>'S'</code> como claves y el número de veces que aparece cada uno como valor. Para esta práctica, distingue mayúsculas de minúsculas.</p>
+<p>Por ejemplo, si la lista es:</p>
+<pre>nombres = ['Sofia', 'Saul', 'Jorge', 'Samantha', 'Jonathan',
+           'Sofia', 'Juan', 'Joaquin', 'Diana', 'Daniela',
+           'Sarah', 'Sofia', 'Samantha']</pre>
+<p>Se debe obtener <code>{'Sofia': 3, 'Saul': 1, 'Samantha': 2, 'Sarah': 1}</code>.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que, dada una lista de números enteros, determine la diferencia entre el mayor número par y el menor número impar de la lista. Imprime ambos valores y la resta correspondiente.</p>
+<p>Por ejemplo, si la lista es <code>[1, 2, 4, 6]</code>, se debe imprimir <code>6 - 1 = 5</code>. Si falta algún número par o impar, informa que no es posible calcular la diferencia.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>En un registro, cada número indica cuántos siniestros presentó una persona durante un periodo. Por ejemplo, la lista <code>[0, 1, 0, 2, 1, 3]</code> corresponde a seis personas.</p>
+<p>Crea un programa en Python que cuente cuántas personas presentaron $0$, $1$, $2$ y $3$ o más siniestros. Guarda las cuatro frecuencias en un diccionario y calcula la proporción de personas que presentaron al menos un siniestro.</p>
+<p>Para la lista del ejemplo, el diccionario debe tener las frecuencias <code>{'0': 2, '1': 2, '2': 1, '3 o más': 1}</code>, y la proporción solicitada es $4/6$. Si la lista está vacía, indica que no hay datos para calcular la proporción.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que solicite al usuario un número entero positivo $n$ e imprima una lista de todos los números primos menores o iguales que $n$.</p>
+<p>Por ejemplo, si $n=10$, se debe imprimir <code>[2, 3, 5, 7]</code>. Si $n=1$, la lista debe estar vacía, pues $1$ no es un número primo.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que solicite al usuario una cadena formada únicamente por dígitos y determine el mayor dígito impar que aparece en ella.</p>
+<p>Por ejemplo, si ingresa <code>'23569'</code>, se debe imprimir <code>9</code>. Si la cadena no contiene dígitos impares, imprime un mensaje adecuado. Solicita nuevamente la entrada si la cadena está vacía o contiene caracteres distintos de dígitos.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Crea un programa en Python que reciba una lista de números. Si contiene ceros, mueve todos los ceros al final <b>sin modificar el orden relativo</b> de los demás elementos. Si no contiene ceros, ordena la lista de menor a mayor. Imprime la lista resultante en ambos casos.</p>
+<p>Por ejemplo, para <code>[1, 4, 6, 0, 7, 0, 9]</code> se debe imprimir <code>[1, 4, 6, 7, 9, 0, 0]</code>. En cambio, para <code>[2, 1, 4, 7, 6]</code> se debe imprimir <code>[1, 2, 4, 6, 7]</code>.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Escribe un programa en Python que lea una línea de texto, cuente las apariciones de cada palabra e imprima también el número de palabras distintas.</p>
+<p>Para esta práctica, considera iguales las palabras que solo difieren en mayúsculas o minúsculas y no tomes en cuenta los signos <code>.,;:¡!¿?</code> al principio o al final de cada palabra. Por ejemplo, en <code>Riesgo, riesgo y azar.</code>, la palabra <code>riesgo</code> aparece dos veces y hay tres palabras distintas.</p>
+<center><img src="https://pjhh-umar.github.io/ProgramacionUNO/Imagenes/contador_palabras.png" alt="Ejemplo de contador de palabras" width="25%" height="auto"></center>
+<p><b>Sugerencia:</b> Usa el método <code>split()</code> y guarda las frecuencias en un diccionario.</p>
+</div>
+
+<div class="nota-box"><h1 class="number-title-practica"> Práctica</h1>
+<p>Una lista contiene los resultados de varios lanzamientos de una moneda como cadenas <code>'cara'</code> y <code>'cruz'</code>. La <b>racha de caras</b> es el número de apariciones consecutivas de <code>'cara'</code> antes de que aparezca <code>'cruz'</code> o termine la lista.</p>
+<p>Crea un programa en Python que recorra la lista y determine la longitud de la racha de caras más larga. Por ejemplo, para <code>['cara', 'cara', 'cruz', 'cara', 'cara', 'cara']</code>, el resultado es $3$. Si la lista está vacía o no contiene caras, el resultado es $0$.</p>
+</div>
+
+      <!-- Donde aparecerá la fecha de la última modificación -->
+   <footer>
+    <center>
+     <p id="ultima-actualizacion"></p>
+    </center>
+</footer>
+<script>
+  // Obtenemos la fecha y hora de la última modificación del documento
+  const fechaModificacion = new Date(document.lastModified);
+  
+  // Opciones para formatear la fecha (por ejemplo, DD/MM/AAAA)
+  const opcionesFecha = { day: '2-digit', month: '2-digit', year: 'numeric' };
+  const fechaFormateada = fechaModificacion.toLocaleDateString('es-ES', opcionesFecha);
+
+  // Obtenemos la hora (HH:MM:SS)
+  const horaFormateada = fechaModificacion.toLocaleTimeString('es-ES', {
+      hour: '2-digit', minute: '2-digit'
+  });
+
+  // Insertamos la fecha y la hora en el elemento con el ID "ultima-modificacion"
+  document.getElementById("ultima-actualizacion").textContent = `Última actualización: ${fechaFormateada}`;
+</script>
+
+
+
+  </body>
+    
